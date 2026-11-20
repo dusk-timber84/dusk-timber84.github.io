@@ -1,0 +1,1732 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>捷克街头钞能力系列 - 官方品牌门户 | 城市影像社区</title>
+<meta name="description" content="捷克街头钞能力系列官方网站，专注城市街头影像与创作社区，汇聚原创精品内容、实力创作者与在地文化故事，打造值得信赖的视频内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f3b4d'/%3E%3Cpath d='M20 16h10v32H20zM36 16h8v32h-8z' fill='%23f0b429'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --jk-ink:#1f3b4d;
+    --jk-ink-deep:#132735;
+    --jk-mist:#eaf0f3;
+    --jk-sky:#3f7c9a;
+    --jk-amber:#f0b429;
+    --jk-amber-soft:#fdeec8;
+    --jk-line:#d5e0e6;
+    --jk-paper:#f7fafb;
+    --jk-text:#22323c;
+    --jk-muted:#5f7481;
+    --jk-radius:14px;
+    --jk-shadow:0 10px 30px rgba(19,39,53,.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,sans-serif;
+    color:var(--jk-text);
+    background:var(--jk-paper);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  ul{list-style:none}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  .jk-skip{position:absolute;left:-9999px;top:0;background:var(--jk-amber);color:var(--jk-ink-deep);padding:10px 18px;z-index:200}
+  .jk-skip:focus{left:10px;top:10px}
+
+  /* ===== 吸顶区：公告条 + 页头 ===== */
+  .jk-sticky{
+    position:sticky;top:0;z-index:120;
+    box-shadow:0 2px 14px rgba(19,39,53,.08);
+  }
+  .jk-notice{
+    background:linear-gradient(90deg,var(--jk-ink-deep),var(--jk-sky));
+    color:#eaf4f9;
+    font-size:13.5px;
+    padding:8px 20px;
+    display:flex;align-items:center;gap:12px;
+    overflow:hidden;
+  }
+  .jk-notice__tag{
+    background:var(--jk-amber);color:var(--jk-ink-deep);
+    font-weight:700;font-size:12px;padding:1px 10px;border-radius:20px;
+    flex-shrink:0;letter-spacing:.5px;
+  }
+  .jk-notice__track{flex:1;overflow:hidden;white-space:nowrap}
+  .jk-notice__item{
+    display:inline-block;animation:jk-notice-slide 26s linear infinite;
+    padding-right:60px;
+  }
+  @keyframes jk-notice-slide{
+    from{transform:translateX(0)}
+    to{transform:translateX(-55%)}
+  }
+  .jk-notice a{color:var(--jk-amber);border-bottom:1px dashed rgba(240,180,41,.6)}
+
+  .jk-header{
+    background:rgba(247,250,251,.96);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--jk-line);
+  }
+  .jk-header__in{
+    max-width:1200px;margin:0 auto;padding:0 20px;
+    display:flex;align-items:center;gap:22px;height:66px;
+  }
+  .jk-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.5px;color:var(--jk-ink-deep);flex-shrink:0}
+  .jk-logo__mark{
+    width:36px;height:36px;border-radius:10px;
+    background:linear-gradient(135deg,var(--jk-ink),var(--jk-sky));
+    display:grid;place-items:center;color:var(--jk-amber);font-size:17px;font-weight:900;
+    box-shadow:0 4px 12px rgba(63,124,154,.35);
+  }
+  .jk-logo__sub{display:block;font-size:10.5px;font-weight:500;color:var(--jk-muted);letter-spacing:2px;margin-top:-4px}
+  .jk-nav{display:flex;gap:4px;margin-left:8px;flex-wrap:wrap}
+  .jk-nav a{
+    padding:8px 13px;border-radius:9px;font-size:14.5px;color:var(--jk-ink);font-weight:500;
+    transition:background .2s,color .2s;
+  }
+  .jk-nav a:hover,.jk-nav a.jk-is-active{background:var(--jk-mist);color:var(--jk-sky)}
+  .jk-search{
+    margin-left:auto;display:flex;align-items:center;gap:0;
+    border:1.5px solid var(--jk-line);border-radius:24px;background:#fff;
+    padding:3px 4px 3px 16px;transition:border-color .2s,box-shadow .2s;
+  }
+  .jk-search:focus-within{border-color:var(--jk-sky);box-shadow:0 0 0 3px rgba(63,124,154,.14)}
+  .jk-search input{
+    border:none;outline:none;background:transparent;font-size:14px;width:170px;color:var(--jk-text);
+    font-family:inherit;
+  }
+  .jk-search__btn{
+    background:var(--jk-ink);color:#fff;border-radius:19px;padding:6px 16px;font-size:13.5px;
+    transition:background .2s;
+  }
+  .jk-search__btn:hover{background:var(--jk-sky)}
+  .jk-burger{display:none;flex-direction:column;gap:5px;padding:8px;margin-left:auto}
+  .jk-burger span{width:22px;height:2.5px;background:var(--jk-ink);border-radius:2px;transition:.25s}
+  .jk-burger.jk-is-open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .jk-burger.jk-is-open span:nth-child(2){opacity:0}
+  .jk-burger.jk-is-open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .jk-search__hint{
+    position:absolute;left:20px;right:20px;top:70px;
+    background:#fff;border:1px solid var(--jk-line);border-radius:12px;
+    box-shadow:var(--jk-shadow);padding:12px 16px;font-size:13.5px;color:var(--jk-muted);
+    display:none;z-index:130;
+  }
+  .jk-search__hint.jk-is-show{display:block}
+  .jk-search__hint strong{color:var(--jk-sky)}
+
+  /* ===== 通用容器/标题 ===== */
+  .jk-wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+  .jk-section{padding:74px 0}
+  .jk-section--tight{padding:56px 0}
+  .jk-section--alt{background:var(--jk-mist)}
+  .jk-section--dark{background:linear-gradient(160deg,var(--jk-ink-deep),var(--jk-ink));color:#e6eef3}
+  .jk-sec-head{margin-bottom:38px;max-width:760px}
+  .jk-sec-head__kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12.5px;letter-spacing:2.5px;color:var(--jk-sky);font-weight:700;
+    text-transform:uppercase;margin-bottom:10px;
+  }
+  .jk-sec-head__kicker::before{content:"";width:22px;height:2.5px;background:var(--jk-amber);border-radius:2px}
+  .jk-section--dark .jk-sec-head__kicker{color:var(--jk-amber)}
+  h2.jk-sec-head__title{font-size:clamp(24px,3.2vw,34px);font-weight:800;color:var(--jk-ink-deep);line-height:1.3;letter-spacing:.5px}
+  .jk-section--dark h2.jk-sec-head__title{color:#fff}
+  .jk-sec-head__desc{margin-top:12px;font-size:15px;color:var(--jk-muted);line-height:1.85}
+  .jk-section--dark .jk-sec-head__desc{color:#a9c2d0}
+
+  /* ===== 首屏 ===== */
+  .jk-hero{position:relative;overflow:hidden;background:linear-gradient(140deg,#14303f 0%,#1f3b4d 45%,#2f6480 100%)}
+  .jk-hero::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(900px 420px at 82% 8%,rgba(240,180,41,.20),transparent 60%),
+      radial-gradient(700px 500px at 6% 92%,rgba(63,124,154,.55),transparent 65%);
+  }
+  .jk-hero__in{
+    position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:76px 20px 84px;
+    display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;
+  }
+  .jk-hero__badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(240,180,41,.14);border:1px solid rgba(240,180,41,.45);
+    color:var(--jk-amber);font-size:12.5px;font-weight:600;letter-spacing:1.5px;
+    padding:5px 14px;border-radius:22px;margin-bottom:20px;
+  }
+  .jk-hero__badge i{width:7px;height:7px;border-radius:50%;background:var(--jk-amber);display:inline-block}
+  h1.jk-hero__title{
+    font-size:clamp(32px,4.6vw,52px);line-height:1.16;color:#fff;font-weight:900;letter-spacing:1px;
+  }
+  h1.jk-hero__title em{
+    font-style:normal;color:var(--jk-amber);
+    background:linear-gradient(transparent 62%,rgba(240,180,41,.24) 62%);
+  }
+  .jk-hero__slogan{margin-top:16px;font-size:17px;color:#cfdfe8;letter-spacing:1px;font-weight:500}
+  .jk-hero__intro{margin-top:20px;font-size:14.8px;color:#b6cdda;line-height:1.95;max-width:560px}
+  .jk-hero__intro strong{color:#fff;font-weight:600}
+  .jk-hero__actions{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+  .jk-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 26px;border-radius:30px;font-size:14.5px;font-weight:700;letter-spacing:.5px;
+    transition:transform .2s,box-shadow .2s,background .2s;
+  }
+  .jk-btn--primary{background:var(--jk-amber);color:var(--jk-ink-deep);box-shadow:0 8px 22px rgba(240,180,41,.35)}
+  .jk-btn--primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(240,180,41,.45)}
+  .jk-btn--ghost{border:1.5px solid rgba(255,255,255,.4);color:#e8f1f6}
+  .jk-btn--ghost:hover{background:rgba(255,255,255,.1);border-color:#fff;transform:translateY(-2px)}
+  .jk-hero__stats{display:flex;gap:34px;margin-top:40px;flex-wrap:wrap}
+  .jk-stat__num{font-size:27px;font-weight:900;color:#fff;letter-spacing:.5px}
+  .jk-stat__num span{color:var(--jk-amber);font-size:18px;margin-left:2px}
+  .jk-stat__label{font-size:12.5px;color:#9cb8c7;letter-spacing:1px;margin-top:2px}
+
+  .jk-hero__visual{position:relative}
+  .jk-hero__frame{
+    border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.16);
+    box-shadow:0 30px 60px rgba(0,0,0,.4);
+    transform:rotate(-1.2deg);
+  }
+  .jk-hero__frame img{width:100%;aspect-ratio:16/10;object-fit:cover}
+  .jk-hero__chip{
+    position:absolute;background:#fff;color:var(--jk-ink-deep);
+    border-radius:12px;padding:10px 16px;font-size:13px;font-weight:700;
+    box-shadow:0 14px 30px rgba(0,0,0,.28);display:flex;align-items:center;gap:9px;
+  }
+  .jk-hero__chip i{
+    width:26px;height:26px;border-radius:8px;display:grid;place-items:center;
+    background:var(--jk-amber-soft);color:#a87800;font-style:normal;font-size:13px;
+  }
+  .jk-hero__chip--a{right:-10px;top:18px;transform:rotate(2deg)}
+  .jk-hero__chip--b{left:-14px;bottom:26px;transform:rotate(-2deg);animation:jk-float 5s ease-in-out infinite}
+  @keyframes jk-float{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(-2deg) translateY(-7px)}}
+
+  /* ===== 深度解析 ===== */
+  .jk-about{display:grid;grid-template-columns:.82fr 1.18fr;gap:48px;align-items:start}
+  .jk-about__aside{
+    background:#fff;border:1px solid var(--jk-line);border-radius:var(--jk-radius);
+    padding:26px;box-shadow:var(--jk-shadow);position:sticky;top:110px;
+  }
+  .jk-about__aside h3{font-size:16px;color:var(--jk-ink-deep);margin-bottom:14px;display:flex;align-items:center;gap:9px}
+  .jk-about__aside h3::before{content:"";width:4px;height:17px;background:var(--jk-amber);border-radius:3px}
+  .jk-about__aside li{
+    font-size:13.8px;color:var(--jk-muted);padding:8px 0;border-bottom:1px dashed var(--jk-line);
+    display:flex;justify-content:space-between;gap:10px;
+  }
+  .jk-about__aside li:last-child{border-bottom:none}
+  .jk-about__aside b{color:var(--jk-ink);font-weight:700}
+  .jk-prose p{font-size:15.2px;color:#3a4e59;line-height:2.05;margin-bottom:18px;text-align:justify}
+  .jk-prose h3{font-size:19px;color:var(--jk-ink-deep);margin:26px 0 12px;font-weight:800}
+  .jk-prose h3::after{content:"";display:block;width:38px;height:3px;background:var(--jk-sky);border-radius:3px;margin-top:8px}
+  .jk-prose strong{color:var(--jk-sky);font-weight:700}
+  .jk-prose .jk-quote{
+    border-left:4px solid var(--jk-amber);background:var(--jk-amber-soft);
+    padding:16px 20px;border-radius:0 10px 10px 0;font-size:14.5px;color:#6b5300;margin:22px 0;
+  }
+
+  /* ===== 焦点内容 ===== */
+  .jk-feature{display:grid;grid-template-columns:1.5fr 1fr;gap:24px}
+  .jk-feature__main{
+    position:relative;border-radius:var(--jk-radius);overflow:hidden;box-shadow:var(--jk-shadow);
+    min-height:340px;display:flex;align-items:flex-end;color:#fff;
+  }
+  .jk-feature__main img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .jk-feature__main:hover img{transform:scale(1.05)}
+  .jk-feature__main::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(10,24,32,.88))}
+  .jk-feature__body{position:relative;z-index:2;padding:28px}
+  .jk-tag{
+    display:inline-block;background:var(--jk-amber);color:var(--jk-ink-deep);
+    font-size:11.5px;font-weight:800;padding:2px 11px;border-radius:20px;letter-spacing:.5px;margin-bottom:10px;
+  }
+  .jk-feature__body h3{font-size:22px;font-weight:800;line-height:1.4;margin-bottom:8px}
+  .jk-feature__body p{font-size:13.5px;color:#d3e2ea;max-width:520px}
+  .jk-feature__meta{margin-top:14px;display:flex;gap:16px;font-size:12.5px;color:#a9c2d0;flex-wrap:wrap}
+  .jk-feature__list{display:flex;flex-direction:column;gap:14px}
+  .jk-mini{
+    display:grid;grid-template-columns:118px 1fr;gap:14px;align-items:center;
+    background:#fff;border:1px solid var(--jk-line);border-radius:12px;padding:10px;
+    transition:transform .22s,box-shadow .22s,border-color .22s;
+  }
+  .jk-mini:hover{transform:translateX(5px);box-shadow:var(--jk-shadow);border-color:#bcd2dc}
+  .jk-mini__thumb{position:relative;border-radius:8px;overflow:hidden}
+  .jk-mini__thumb img{width:100%;aspect-ratio:16/10;object-fit:cover}
+  .jk-mini__play{
+    position:absolute;inset:0;display:grid;place-items:center;
+    background:rgba(10,24,32,.22);opacity:0;transition:opacity .2s;
+  }
+  .jk-mini:hover .jk-mini__play{opacity:1}
+  .jk-mini__play span{
+    width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.9);
+    display:grid;place-items:center;color:var(--jk-ink);font-size:12px;
+  }
+  .jk-mini h4{font-size:14.5px;color:var(--jk-ink-deep);font-weight:700;line-height:1.45;margin-bottom:4px}
+  .jk-mini p{font-size:12.3px;color:var(--jk-muted);line-height:1.5}
+
+  /* ===== 视频卡片网格 ===== */
+  .jk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .jk-card{
+    background:#fff;border:1px solid var(--jk-line);border-radius:var(--jk-radius);
+    overflow:hidden;display:flex;flex-direction:column;
+    transition:transform .25s,box-shadow .25s;
+  }
+  .jk-card:hover{transform:translateY(-6px);box-shadow:0 18px 38px rgba(19,39,53,.14)}
+  .jk-card__cover{position:relative;overflow:hidden}
+  .jk-card__cover img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .5s}
+  .jk-card:hover .jk-card__cover img{transform:scale(1.06)}
+  .jk-card__cover::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 55%,rgba(10,24,32,.55));
+  }
+  .jk-card__dur{
+    position:absolute;right:10px;bottom:10px;z-index:2;
+    background:rgba(10,24,32,.8);color:#fff;font-size:11.5px;padding:1px 8px;border-radius:5px;
+  }
+  .jk-card__tagwrap{position:absolute;left:10px;top:10px;z-index:2}
+  .jk-card__play{
+    position:absolute;inset:0;display:grid;place-items:center;z-index:1;
+    opacity:0;transition:opacity .25s;
+  }
+  .jk-card:hover .jk-card__play{opacity:1}
+  .jk-card__play span{
+    width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.92);
+    display:grid;place-items:center;color:var(--jk-ink);font-size:15px;
+    box-shadow:0 6px 18px rgba(0,0,0,.28);
+  }
+  .jk-card__body{padding:16px 17px 14px;flex:1;display:flex;flex-direction:column}
+  .jk-card__body h3{font-size:15.6px;font-weight:800;color:var(--jk-ink-deep);line-height:1.45;margin-bottom:7px}
+  .jk-card__body p{font-size:13px;color:var(--jk-muted);line-height:1.65;flex:1;margin-bottom:12px}
+  .jk-card__author{
+    display:flex;align-items:center;gap:9px;padding-top:11px;border-top:1px dashed var(--jk-line);
+  }
+  .jk-avatar{
+    width:28px;height:28px;border-radius:50%;display:grid;place-items:center;
+    font-size:12px;font-weight:800;color:#fff;flex-shrink:0;letter-spacing:0;
+  }
+  .jk-card__author b{font-size:12.8px;color:var(--jk-ink);font-weight:700}
+  .jk-card__author small{font-size:11.5px;color:var(--jk-muted);display:block;line-height:1.3}
+  .jk-card__ops{display:flex;gap:6px;margin-left:auto;align-items:center}
+  .jk-icon-btn{
+    display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--jk-muted);
+    padding:4px 8px;border-radius:7px;transition:background .2s,color .2s;
+  }
+  .jk-icon-btn:hover{background:var(--jk-mist);color:var(--jk-sky)}
+  .jk-icon-btn.jk-is-liked{color:#d9534f}
+  .jk-icon-btn.jk-is-saved{color:#c98a00}
+  .jk-filter{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:28px}
+  .jk-filter button{
+    padding:7px 17px;border-radius:20px;font-size:13.5px;font-weight:600;
+    background:#fff;border:1.5px solid var(--jk-line);color:var(--jk-ink);
+    transition:.2s;
+  }
+  .jk-filter button:hover{border-color:var(--jk-sky);color:var(--jk-sky)}
+  .jk-filter button.jk-is-active{background:var(--jk-ink);border-color:var(--jk-ink);color:#fff}
+  .jk-empty{
+    grid-column:1/-1;text-align:center;padding:44px 20px;color:var(--jk-muted);
+    font-size:14.5px;background:#fff;border:1px dashed var(--jk-line);border-radius:var(--jk-radius);
+  }
+
+  /* ===== 专题 ===== */
+  .jk-special{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .jk-special__card{
+    position:relative;border-radius:var(--jk-radius);overflow:hidden;color:#fff;
+    min-height:230px;display:flex;flex-direction:column;justify-content:flex-end;
+    box-shadow:var(--jk-shadow);transition:transform .25s;
+  }
+  .jk-special__card:hover{transform:translateY(-5px)}
+  .jk-special__card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .jk-special__card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,24,32,.12),rgba(10,24,32,.86))}
+  .jk-special__body{position:relative;z-index:2;padding:20px}
+  .jk-special__status{
+    font-size:11px;font-weight:800;letter-spacing:.8px;padding:2px 10px;border-radius:20px;
+    display:inline-block;margin-bottom:9px;
+  }
+  .jk-special__status--on{background:rgba(240,180,41,.9);color:var(--jk-ink-deep)}
+  .jk-special__status--soon{background:rgba(255,255,255,.2);color:#fff;border:1px solid rgba(255,255,255,.4)}
+  .jk-special__body h3{font-size:17.5px;font-weight:800;margin-bottom:6px}
+  .jk-special__body p{font-size:12.8px;color:#c9dbe5;line-height:1.6}
+
+  /* ===== 创作者 ===== */
+  .jk-creators{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .jk-creator{
+    background:#fff;border:1px solid var(--jk-line);border-radius:var(--jk-radius);
+    padding:24px 20px;text-align:center;transition:transform .25s,box-shadow .25s;
+  }
+  .jk-creator:hover{transform:translateY(-5px);box-shadow:var(--jk-shadow)}
+  .jk-creator__face{
+    width:64px;height:64px;border-radius:50%;margin:0 auto 13px;
+    display:grid;place-items:center;font-size:23px;font-weight:900;color:#fff;
+    box-shadow:0 8px 20px rgba(19,39,53,.18);
+  }
+  .jk-creator h3{font-size:16px;color:var(--jk-ink-deep);font-weight:800;margin-bottom:3px}
+  .jk-creator__field{font-size:12.3px;color:var(--jk-sky);font-weight:700;letter-spacing:.5px;margin-bottom:9px}
+  .jk-creator p{font-size:12.7px;color:var(--jk-muted);line-height:1.7;margin-bottom:13px;min-height:56px}
+  .jk-creator__nums{display:flex;justify-content:center;gap:20px;border-top:1px dashed var(--jk-line);padding-top:11px;font-size:12px;color:var(--jk-muted)}
+  .jk-creator__nums b{display:block;font-size:14.5px;color:var(--jk-ink);font-weight:800}
+  .jk-creator__btn{
+    margin-top:13px;width:100%;padding:7px;border-radius:9px;background:var(--jk-mist);
+    color:var(--jk-ink);font-size:12.8px;font-weight:700;transition:.2s;
+  }
+  .jk-creator__btn:hover{background:var(--jk-ink);color:#fff}
+
+  /* ===== 榜单 ===== */
+  .jk-charts{display:grid;grid-template-columns:1.2fr .9fr .9fr;gap:22px}
+  .jk-chart{
+    background:#fff;border:1px solid var(--jk-line);border-radius:var(--jk-radius);padding:22px 20px;
+  }
+  .jk-chart h3{font-size:15.5px;color:var(--jk-ink-deep);font-weight:800;margin-bottom:15px;display:flex;align-items:center;gap:8px}
+  .jk-chart h3 span{
+    width:23px;height:23px;border-radius:7px;background:var(--jk-amber-soft);color:#a87800;
+    display:grid;place-items:center;font-size:12px;
+  }
+  .jk-chart li{display:flex;align-items:center;gap:11px;padding:9px 0;border-bottom:1px dashed var(--jk-line);font-size:13.3px}
+  .jk-chart li:last-child{border-bottom:none}
+  .jk-chart__no{width:21px;font-weight:900;color:#b9cbd5;font-size:13px;flex-shrink:0}
+  .jk-chart li:nth-child(1) .jk-chart__no{color:var(--jk-amber)}
+  .jk-chart li:nth-child(2) .jk-chart__no{color:#9aa9b3}
+  .jk-chart li:nth-child(3) .jk-chart__no{color:#c08b5a}
+  .jk-chart__name{flex:1;color:var(--jk-ink);font-weight:600}
+  .jk-chart__val{font-size:12px;color:var(--jk-muted)}
+
+  /* ===== 故事随笔 ===== */
+  .jk-stories{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .jk-story{
+    background:#fff;border:1px solid var(--jk-line);border-radius:var(--jk-radius);
+    padding:24px 22px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;
+  }
+  .jk-story:hover{transform:translateY(-4px);box-shadow:var(--jk-shadow)}
+  .jk-story::before{
+    content:"“";position:absolute;right:14px;top:-14px;font-size:80px;color:var(--jk-mist);font-weight:900;line-height:1;
+  }
+  .jk-story__tag{font-size:11.5px;font-weight:800;color:var(--jk-sky);letter-spacing:1.4px;margin-bottom:9px;position:relative}
+  .jk-story h3{font-size:16px;color:var(--jk-ink-deep);font-weight:800;margin-bottom:10px;line-height:1.45;position:relative}
+  .jk-story p{font-size:13.4px;color:var(--jk-muted);line-height:1.85;position:relative}
+  .jk-story__by{margin-top:14px;font-size:12px;color:#8ba0ac;position:relative;display:flex;align-items:center;gap:7px}
+
+  /* ===== FAQ ===== */
+  .jk-faq{max-width:860px;margin:0 auto}
+  .jk-faq details{
+    background:#fff;border:1px solid var(--jk-line);border-radius:12px;margin-bottom:12px;
+    overflow:hidden;transition:border-color .2s;
+  }
+  .jk-faq details[open]{border-color:var(--jk-sky)}
+  .jk-faq summary{
+    padding:16px 20px;font-size:15px;font-weight:700;color:var(--jk-ink-deep);cursor:pointer;
+    list-style:none;display:flex;align-items:center;gap:11px;
+  }
+  .jk-faq summary::-webkit-details-marker{display:none}
+  .jk-faq summary::before{
+    content:"+";width:22px;height:22px;border-radius:7px;background:var(--jk-mist);
+    color:var(--jk-sky);display:grid;place-items:center;font-size:15px;font-weight:700;flex-shrink:0;
+    transition:transform .2s,background .2s;
+  }
+  .jk-faq details[open] summary::before{content:"−";background:var(--jk-sky);color:#fff}
+  .jk-faq__a{padding:0 20px 18px 53px;font-size:13.8px;color:var(--jk-muted);line-height:1.9}
+
+  /* ===== 动态时间线 ===== */
+  .jk-timeline{position:relative;padding-left:26px}
+  .jk-timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--jk-line)}
+  .jk-timeline__item{position:relative;padding-bottom:24px}
+  .jk-timeline__item:last-child{padding-bottom:0}
+  .jk-timeline__item::before{
+    content:"";position:absolute;left:-26px;top:6px;width:12px;height:12px;border-radius:50%;
+    background:#fff;border:3px solid var(--jk-sky);
+  }
+  .jk-timeline__date{font-size:12px;font-weight:800;color:var(--jk-sky);letter-spacing:1px;margin-bottom:4px}
+  .jk-timeline__item h3{font-size:15.5px;color:var(--jk-ink-deep);font-weight:700;margin-bottom:4px}
+  .jk-timeline__item p{font-size:13.3px;color:var(--jk-muted);line-height:1.75}
+  .jk-dyn{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:start}
+
+  /* ===== 伙伴 ===== */
+  .jk-partners{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+  .jk-partner{
+    background:#fff;border:1px solid var(--jk-line);border-radius:12px;
+    padding:18px 10px;text-align:center;font-size:13px;font-weight:700;color:var(--jk-ink);
+    transition:.22s;
+  }
+  .jk-partner:hover{background:var(--jk-ink);color:#fff;border-color:var(--jk-ink);transform:translateY(-3px)}
+  .jk-partner small{display:block;font-size:10.5px;color:var(--jk-muted);font-weight:500;margin-top:3px}
+  .jk-partner:hover small{color:#a9c2d0}
+
+  /* ===== 联系/投稿 ===== */
+  .jk-cta{
+    max-width:1200px;margin:0 auto;padding:52px 40px;
+    background:linear-gradient(120deg,var(--jk-ink-deep),var(--jk-sky));
+    border-radius:22px;color:#fff;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;
+    box-shadow:0 24px 50px rgba(19,39,53,.28);
+  }
+  .jk-cta h2{font-size:clamp(22px,2.9vw,30px);font-weight:900;line-height:1.35;margin-bottom:12px}
+  .jk-cta p{font-size:14.2px;color:#c3d7e2;line-height:1.85}
+  .jk-cta__actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:24px}
+  .jk-cta__info{font-size:13px;color:#a9c2d0;line-height:2.1}
+  .jk-cta__info b{color:#fff;font-weight:700}
+  .jk-cta__panel{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:22px}
+  .jk-cta__panel h3{font-size:15px;margin-bottom:12px;color:var(--jk-amber);letter-spacing:.5px}
+  .jk-cta__panel li{font-size:13px;color:#cfdfe8;padding:7px 0;border-bottom:1px dashed rgba(255,255,255,.16);display:flex;justify-content:space-between}
+  .jk-cta__panel li:last-child{border-bottom:none}
+
+  /* ===== 页脚 ===== */
+  .jk-footer{background:var(--jk-ink-deep);color:#9cb4c1;padding:58px 0 0;font-size:13.5px}
+  .jk-footer__grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:36px;padding-bottom:38px}
+  .jk-footer h4{color:#fff;font-size:14.5px;font-weight:800;margin-bottom:15px;letter-spacing:.6px}
+  .jk-footer a{transition:color .2s}
+  .jk-footer a:hover{color:var(--jk-amber)}
+  .jk-footer li{padding:5px 0}
+  .jk-footer__brand{display:flex;align-items:center;gap:10px;margin-bottom:13px;color:#fff;font-weight:800;font-size:17px}
+  .jk-footer__brand .jk-logo__mark{width:30px;height:30px;font-size:14px;border-radius:8px}
+  .jk-footer__desc{line-height:1.9;color:#8ea6b3;font-size:13px}
+  .jk-footer__social{display:flex;gap:9px;margin-top:15px}
+  .jk-footer__social span{
+    width:32px;height:32px;border-radius:9px;background:rgba(255,255,255,.08);
+    display:grid;place-items:center;font-size:12.5px;color:#c8dae4;cursor:pointer;transition:.2s;
+  }
+  .jk-footer__social span:hover{background:var(--jk-amber);color:var(--jk-ink-deep)}
+  .jk-footer__bottom{
+    border-top:1px solid rgba(255,255,255,.1);padding:19px 0;
+    display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:12.3px;color:#7d97a5;
+  }
+
+  /* ===== 回到顶部 & Toast ===== */
+  .jk-top{
+    position:fixed;right:24px;bottom:26px;z-index:140;
+    width:46px;height:46px;border-radius:50%;background:var(--jk-ink);color:#fff;
+    display:grid;place-items:center;font-size:17px;box-shadow:0 10px 24px rgba(19,39,53,.3);
+    opacity:0;visibility:hidden;transform:translateY(12px);transition:.28s;
+  }
+  .jk-top.jk-is-show{opacity:1;visibility:visible;transform:translateY(0)}
+  .jk-top:hover{background:var(--jk-sky)}
+  .jk-toast{
+    position:fixed;left:50%;bottom:38px;transform:translate(-50%,20px);z-index:300;
+    background:var(--jk-ink-deep);color:#fff;padding:11px 24px;border-radius:26px;font-size:13.5px;
+    box-shadow:0 14px 32px rgba(0,0,0,.3);opacity:0;visibility:hidden;transition:.28s;white-space:nowrap;
+  }
+  .jk-toast.jk-is-show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+
+  /* ===== 弹窗 ===== */
+  .jk-modal{
+    position:fixed;inset:0;z-index:260;display:grid;place-items:center;padding:20px;
+    background:rgba(10,24,32,.55);backdrop-filter:blur(4px);
+    opacity:0;visibility:hidden;transition:.25s;
+  }
+  .jk-modal.jk-is-show{opacity:1;visibility:visible}
+  .jk-modal__box{
+    background:#fff;border-radius:16px;max-width:440px;width:100%;padding:28px;
+    box-shadow:0 30px 60px rgba(0,0,0,.3);transform:translateY(16px);transition:.25s;
+    max-height:86vh;overflow:auto;
+  }
+  .jk-modal.jk-is-show .jk-modal__box{transform:translateY(0)}
+  .jk-modal__box h3{font-size:18px;color:var(--jk-ink-deep);font-weight:800;margin-bottom:8px}
+  .jk-modal__box p{font-size:13.5px;color:var(--jk-muted);line-height:1.8;margin-bottom:16px}
+  .jk-modal__box textarea{
+    width:100%;min-height:96px;border:1.5px solid var(--jk-line);border-radius:10px;
+    padding:12px;font-family:inherit;font-size:13.5px;color:var(--jk-text);outline:none;resize:vertical;
+  }
+  .jk-modal__box textarea:focus{border-color:var(--jk-sky)}
+  .jk-modal__field{margin-bottom:14px}
+  .jk-modal__field label{font-size:13px;font-weight:700;color:var(--jk-ink);display:block;margin-bottom:5px}
+  .jk-modal__field input{
+    width:100%;border:1.5px solid var(--jk-line);border-radius:10px;padding:10px 12px;
+    font-family:inherit;font-size:13.5px;outline:none;
+  }
+  .jk-modal__field input:focus{border-color:var(--jk-sky)}
+  .jk-modal__ops{display:flex;gap:10px;justify-content:flex-end;margin-top:8px}
+  .jk-btn--dark{background:var(--jk-ink);color:#fff;padding:9px 22px;border-radius:10px;font-size:13.5px;font-weight:700}
+  .jk-btn--dark:hover{background:var(--jk-sky)}
+  .jk-btn--plain{background:var(--jk-mist);color:var(--jk-ink);padding:9px 22px;border-radius:10px;font-size:13.5px;font-weight:700}
+  .jk-btn--plain:hover{background:#dde8ee}
+  .jk-share-list{display:flex;gap:12px;margin-top:6px}
+  .jk-share-list button{
+    flex:1;padding:12px 6px;border-radius:11px;background:var(--jk-mist);font-size:12.5px;font-weight:700;
+    color:var(--jk-ink);transition:.2s;
+  }
+  .jk-share-list button:hover{background:var(--jk-ink);color:#fff}
+
+  /* ===== 响应式 ===== */
+  @media(max-width:1024px){
+    .jk-hero__in{grid-template-columns:1fr;gap:36px;padding:56px 20px 62px}
+    .jk-hero__frame{transform:rotate(0)}
+    .jk-about{grid-template-columns:1fr;gap:30px}
+    .jk-about__aside{position:static}
+    .jk-feature{grid-template-columns:1fr}
+    .jk-grid{grid-template-columns:repeat(2,1fr)}
+    .jk-special{grid-template-columns:repeat(2,1fr)}
+    .jk-creators{grid-template-columns:repeat(2,1fr)}
+    .jk-charts{grid-template-columns:1fr 1fr}
+    .jk-stories{grid-template-columns:1fr 1fr}
+    .jk-dyn{grid-template-columns:1fr;gap:34px}
+    .jk-partners{grid-template-columns:repeat(3,1fr)}
+    .jk-cta{grid-template-columns:1fr;padding:40px 28px}
+    .jk-footer__grid{grid-template-columns:1fr 1fr;gap:26px}
+  }
+  @media(max-width:768px){
+    .jk-nav{
+      display:none;position:absolute;left:0;right:0;top:100%;
+      background:#fff;border-bottom:1px solid var(--jk-line);
+      flex-direction:column;padding:12px 16px;gap:2px;box-shadow:0 14px 26px rgba(19,39,53,.12);
+    }
+    .jk-nav.jk-is-open{display:flex}
+    .jk-nav a{width:100%;padding:11px 13px}
+    .jk-header__in{position:relative;height:60px}
+    .jk-search{display:none}
+    .jk-burger{display:flex}
+    .jk-notice{font-size:12px;padding:7px 14px}
+    .jk-section{padding:52px 0}
+    .jk-grid,.jk-special,.jk-stories{grid-template-columns:1fr}
+    .jk-creators{grid-template-columns:1fr 1fr}
+    .jk-charts{grid-template-columns:1fr}
+    .jk-hero__stats{gap:24px}
+    .jk-stat__num{font-size:23px}
+    .jk-partners{grid-template-columns:1fr 1fr}
+    .jk-footer__grid{grid-template-columns:1fr}
+    .jk-footer__bottom{flex-direction:column;gap:6px}
+    .jk-burger{margin-left:0}
+    .jk-hero__chip--a{right:0;top:10px}
+    .jk-hero__chip--b{left:0;bottom:14px}
+    .jk-cta{padding:34px 22px}
+    .jk-toast{font-size:12.5px;padding:10px 18px;max-width:88%;white-space:normal;text-align:center}
+  }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<a class="jk-skip" href="#jk-main">跳到主要内容</a>
+
+<!-- 吸顶区 -->
+<div class="jk-sticky">
+  <div class="jk-notice" id="jk-notice">
+    <span class="jk-notice__tag">公告</span>
+    <div class="jk-notice__track">
+      <span class="jk-notice__item">
+        新增《布拉格老城广场·三位路人的一百欧实验》第 12 期正片已上线；《查理大桥晨光手记》幕后花絮同步更新；本月「街头创意挑战」报名通道开启，截止 11 月 28 日；创作者成长计划第三期开放申请 —— <a href="#jk-dynamic">查看全部官方发布</a>
+      </span>
+    </div>
+  </div>
+
+  <header class="jk-header">
+    <div class="jk-header__in">
+      <a class="jk-logo" href="#jk-main" aria-label="捷克街头钞能力系列官方网站首页">
+        <span class="jk-logo__mark">钞</span>
+        <span>
+          捷克街头钞能力
+          <span class="jk-logo__sub">OFFICIAL BRAND</span>
+        </span>
+      </a>
+      <nav class="jk-nav" id="jk-nav" aria-label="主导航">
+        <a href="#jk-main" class="jk-is-active">首页</a>
+        <a href="#jk-about">品牌解析</a>
+        <a href="#jk-feature">焦点内容</a>
+        <a href="#jk-videos">精品内容</a>
+        <a href="#jk-special">专题企划</a>
+        <a href="#jk-creators">创作者</a>
+        <a href="#jk-charts">榜单</a>
+        <a href="#jk-dynamic">企业动态</a>
+        <a href="#jk-faq">帮助</a>
+        <a href="#jk-contact">联系</a>
+      </nav>
+      <div class="jk-search">
+        <input type="search" id="jk-search-input" placeholder="搜索主题 / 创作者 / 专题" aria-label="站内搜索">
+        <button class="jk-search__btn" id="jk-search-btn" type="button">搜索</button>
+      </div>
+      <button class="jk-burger" id="jk-burger" type="button" aria-label="展开导航菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="jk-search__hint" id="jk-search-hint" role="status"></div>
+  </header>
+</div>
+
+<main id="jk-main">
+
+  <!-- 首屏 -->
+  <section class="jk-hero" aria-labelledby="jk-hero-title">
+    <div class="jk-hero__in">
+      <div>
+        <span class="jk-hero__badge"><i></i>品牌官方网站 · 城市街头影像社区</span>
+        <h1 class="jk-hero__title" id="jk-hero-title">捷克街头<em>钞能力</em>系列</h1>
+        <p class="jk-hero__slogan">用镜头记录街头的真实反应，用影像讲述人与善意之间的故事。</p>
+        <p class="jk-hero__intro">
+          作为国内专注城市街头影像的<strong>品牌</strong>与<strong>企业</strong>级内容平台，我们以「捷克街头钞能力系列」为核心原创 IP，
+          持续出品高质量街头观察、人文纪录与创意实验短片。我们相信街头的每一秒都值得被认真对待，
+          因此坚持原创拍摄、正版授权、高清画质与专业后期，搭建从创作者到观众的完整<strong>内容生态</strong>。
+        </p>
+        <div class="jk-hero__actions">
+          <a class="jk-btn jk-btn--primary" href="#jk-videos">进入精品内容</a>
+          <a class="jk-btn jk-btn--ghost" href="#jk-about">了解品牌故事</a>
+          <button class="jk-btn jk-btn--ghost" type="button" data-jk-open="submit">投稿与我们合作</button>
+        </div>
+        <div class="jk-hero__stats">
+          <div class="jk-stat">
+            <div class="jk-stat__num" data-jk-count="1286">0<span>+</span></div>
+            <div class="jk-stat__label">原创影像作品</div>
+          </div>
+          <div class="jk-stat">
+            <div class="jk-stat__num" data-jk-count="342">0<span>位</span></div>
+            <div class="jk-stat__label">签约与入驻创作者</div>
+          </div>
+          <div class="jk-stat">
+            <div class="jk-stat__num" data-jk-count="960000">0<span>+</span></div>
+            <div class="jk-stat__label">社区累计关注</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="jk-hero__visual">
+        <div class="jk-hero__frame">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232f6480'/%3E%3Cstop offset='1' stop-color='%2314303f'/%3E%3C/linearGradient%3E%3ClinearGradient id='gold' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f0b429'/%3E%3Cstop offset='1' stop-color='%23d98f00'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23sky)'/%3E%3Ccircle cx='640' cy='96' r='54' fill='%23f0b429' opacity='0.9'/%3E%3Crect x='0' y='380' width='800' height='120' fill='%230d1f2a'/%3E%3Cg fill='%231b3646'%3E%3Crect x='40' y='180' width='90' height='200'/%3E%3Crect x='150' y='130' width='70' height='250'/%3E%3Crect x='240' y='210' width='110' height='170'/%3E%3Crect x='620' y='160' width='80' height='220'/%3E%3Crect x='710' y='220' width='70' height='160'/%3E%3C/g%3E%3Cg fill='%23f0b429' opacity='0.55'%3E%3Crect x='56' y='200' width='14' height='18'/%3E%3Crect x='86' y='200' width='14' height='18'/%3E%3Crect x='56' y='240' width='14' height='18'/%3E%3Crect x='164' y='150' width='14' height='18'/%3E%3Crect x='264' y='230' width='14' height='18'/%3E%3Crect x='640' y='182' width='14' height='18'/%3E%3C/g%3E%3Cpath d='M330 500 L400 300 L470 500 Z' fill='%23c9dbe5' opacity='0.13'/%3E%3Cg%3E%3Ccircle cx='395' cy='360' r='22' fill='%23f0b429'/%3E%3Crect x='379' y='382' width='32' height='70' rx='14' fill='%232f6480'/%3E%3C/g%3E%3Cg%3E%3Ccircle cx='448' cy='392' r='17' fill='%23e0eef5' opacity='0.85'/%3E%3Crect x='436' y='409' width='24' height='58' rx='11' fill='%235f8fa8'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='0.85'%3E%3Crect x='500' y='120' width='150' height='88' rx='12' fill='%23f0b429'/%3E%3Ctext x='575' y='172' font-size='30' font-family='sans-serif' font-weight='bold' fill='%2314303f' text-anchor='middle'%3E100%3C/text%3E%3C/g%3E%3C/svg%3E" alt="布拉格老城广场街头实验主视觉，黄昏光线与路人剪影">
+        </div>
+        <div class="jk-hero__chip jk-hero__chip--a"><i>▶</i>第 12 期正片 · 已上线</div>
+        <div class="jk-hero__chip jk-hero__chip--b"><i>★</i>原创正版 · 高清呈现</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌深度解析 -->
+  <section class="jk-section" id="jk-about" aria-labelledby="jk-about-title">
+    <div class="jk-wrap">
+      <div class="jk-sec-head">
+        <span class="jk-sec-head__kicker">Brand Insight</span>
+        <h2 class="jk-sec-head__title" id="jk-about-title">关于「捷克街头钞能力系列」，你需要知道的品牌解析</h2>
+        <p class="jk-sec-head__desc">从一次即兴拍摄到持续运营的城市影像品牌，我们把街头的偶然，做成了一条值得长期投入的内容赛道。</p>
+      </div>
+
+      <div class="jk-about">
+        <aside class="jk-about__aside">
+          <h3>品牌信息速览</h3>
+          <ul>
+            <li><span>成立时间</span><b>2019 年 4 月</b></li>
+            <li><span>内容赛道</span><b>城市街头影像</b></li>
+            <li><span>核心 IP</span><b>钞能力系列</b></li>
+            <li><span>更新频率</span><b>每周三、周六</b></li>
+            <li><span>拍摄常驻地</span><b>布拉格 / 布尔诺</b></li>
+            <li><span>团队成员</span><b>28 人</b></li>
+            <li><span>入驻创作者</span><b>342 位</b></li>
+            <li><span>正版素材库</span><b>6,800+ 条</b></li>
+          </ul>
+        </aside>
+
+        <div class="jk-prose">
+          <h3>一、这个品牌到底是做什么的</h3>
+          <p>
+            「捷克街头钞能力系列」是一个以<strong>城市街头真实互动</strong>为拍摄对象的中文原创影像品牌。
+            我们的镜头常年游走在布拉格、布尔诺、克鲁姆洛夫这些城市的石板路上，
+            用一台手持机、一支麦克风和一点小小的「钞能力」设定，去记录陌生人面对突发情境时最本能的反应。
+            它不是剧本化的街头恶作剧，也不是精心编排的综艺桥段，而是一群认真做内容的人，
+            试图在这一秒就滑走的注意力时代里，把一段真实的、带温度的人际互动完整地留下来。
+          </p>
+          <p>
+            从 2019 年 4 月发布第一支 3 分钟的短片开始，我们逐步建立了完整的拍摄流程、伦理规范与内容审核机制。
+            如今品牌已发展为一家拥有 28 人核心团队的企业，覆盖策划、编导、摄影、剪辑、声音、运营与法务合规等全链路岗位，
+            并持续运营着面向创作者的开放社区。作为这个垂直领域里被广泛认可的<strong>品牌平台</strong>，
+            我们更愿意把自己定义为「街头观察的记录者」，而不是「流量的猎手」。
+          </p>
+
+          <h3>二、钞能力系列的核心设定</h3>
+          <p>
+            「钞能力」三个字并不是炫耀金钱，而是一种温和的叙事装置。
+            我们会在镜头前向随机路人提出一个需要动用一点点钱、但更多需要动用判断力与善意的选择：
+            比如「这张纸币你愿意分一半给下一位路人吗」「如果给你一百欧，你打算怎么用它帮助别人」。
+            摄像机只做记录，不做引导，也不设置输赢。真正被呈现的，
+            是人在做决定前的三秒钟犹豫、看向同伴的眼神、以及最终选择背后那套朴素的价值观。
+          </p>
+          <div class="jk-quote">
+            我们从不评价路人的选择，只忠实呈现选择本身。街头是最诚实的布景，而善意是最不需要翻译的语言。
+          </div>
+          <p>
+            这套设定让「捷克街头钞能力系列」超越了单纯的猎奇内容，逐渐积累了稳定的<strong>品质口碑</strong>。
+            有观众留言说，看完之后自己会在地铁站里多停留一会儿；也有教师把我们的短片作为课堂素材，
+            用来讨论公共空间里的信任问题。这些反馈让我们更确信：内容生态真正的价值，
+            不在于一次播放量的峰值，而在于它能不能在观众心里留下一点点余温。
+          </p>
+
+          <h3>三、原创与正版，是我们最不肯让步的底线</h3>
+          <p>
+            街头拍摄涉及大量不确定因素。所有出现在画面中的路人，我们都会在拍摄结束后逐一解释拍摄用途，
+            并在获得明确口头或书面同意后才保留素材；未获同意的片段会被当场删除并记录归档。
+            品牌法务团队为每一次外拍提供合规支持，从肖像权授权单到区域拍摄许可，
+            每一环都有可追溯的流程。这也是我们敢在官网首页写下「<strong>原创、正版、高清</strong>」六个字的底气。
+          </p>
+          <p>
+            在后期层面，品牌自建了 6,800 余条的正版素材库与原创配乐库，所有成片均标注拍摄地、拍摄日期与素材来源，
+            平台内的每一条精品内容都能回溯完整链路。我们并不认为这些是值得夸耀的成本，它们只是做一个内容品牌最基本的事。
+          </p>
+
+          <h3>四、创作者社区：让街头影像被更多人看见</h3>
+          <p>
+            单靠一个团队，能拍摄的街道是有限的。因此我们从 2021 年起开放了创作者入驻通道，
+            为热爱城市记录的创作者提供设备支持、选题共创、剪辑工作坊与收益分成。
+            截至 2026 年 11 月，已有 342 位创作者在平台持续更新，覆盖街头观察、在地文化、人物访谈、
+            城市声音采集等多个方向。我们每年举办两季「街头创意挑战」，
+            不以粉丝量作为唯一评价标准，而是更看重作品的观察角度与完成度。
+          </p>
+          <p>
+            社区里有一个不成文的约定：<strong>不要为了效果去为难任何人</strong>。
+            这条约定写进了创作者手册的第一页，也写进了我们对每一支片子的终审清单里。
+            我们相信，只有尊重镜头里的每一个人，内容生态才有可能<strong>值得信赖</strong>、持续生长。
+          </p>
+
+          <h3>五、我们想做的长期事情</h3>
+          <p>
+            未来三年，品牌计划把拍摄版图从捷克延伸到中欧更多城市，同时把内容形态从短片扩展到长纪录、
+            播客与线下放映。我们正在筹备「街头影像档案馆」项目，
+            把六年多积累的素材按城市、街区、年份进行系统整理，并以开放的姿态对研究者与普通观众开放部分条目。
+            我们希望这个品牌不只是一个内容账号，
+            而是一个能够被反复引用、被认真研究的城市影像样本库。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="jk-section jk-section--alt" id="jk-feature" aria-labelledby="jk-feature-title">
+    <div class="jk-wrap">
+      <div class="jk-sec-head">
+        <span class="jk-sec-head__kicker">Featured</span>
+        <h2 class="jk-sec-head__title" id="jk-feature-title">本期焦点 · 值得花十分钟认真看完的影像</h2>
+        <p class="jk-sec-head__desc">由品牌编辑部与社区共同推荐，每一支都经过选题、拍摄与后期三重把关。</p>
+      </div>
+
+      <div class="jk-feature">
+        <article class="jk-feature__main">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 520'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f2b34a'/%3E%3Cstop offset='0.55' stop-color='%23c9743a'/%3E%3Cstop offset='1' stop-color='%232b4a5c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='900' height='520' fill='url(%23g1)'/%3E%3Ccircle cx='720' cy='120' r='72' fill='%23ffe9b8' opacity='0.55'/%3E%3Cpath d='M0 380 Q220 330 450 372 T900 350 V520 H0 Z' fill='%231e3441' opacity='0.9'/%3E%3Cg fill='%23fff' opacity='0.9'%3E%3Crect x='120' y='300' width='120' height='22' rx='6'/%3E%3Crect x='120' y='336' width='78' height='18' rx='6' opacity='0.7'/%3E%3C/g%3E%3Cg stroke='%23ffe9b8' stroke-width='7' fill='none' opacity='0.85'%3E%3Cpath d='M560 300 l120 -90 l120 90'/%3E%3Cpath d='M600 300 v120 M760 300 v120'/%3E%3C/g%3E%3Cg fill='%231e3441'%3E%3Ccircle cx='300' cy='330' r='20'/%3E%3Crect x='288' y='350' width='24' height='56' rx='10'/%3E%3Ccircle cx='360' cy='345' r='16'/%3E%3Crect x='350' y='361' width='20' height='48' rx='9'/%3E%3C/g%3E%3C/svg%3E" alt="布拉格老城广场黄昏街头实验焦点视频封面">
+          <div class="jk-feature__body">
+            <span class="jk-tag">本期主推</span>
+            <h3>一百欧实验 · 第 12 期：当三位陌生人同时被问「你愿意把这笔钱分给谁」</h3>
+            <p>老城广场的天文钟下，我们从下午三点拍到路灯亮起。有人拒绝，有人转身离开，也有人在犹豫之后把钱递给了一位素不相识的街头艺人。</p>
+            <div class="jk-feature__meta">
+              <span>布拉格 · 老城广场</span>
+              <span>时长 18:42</span>
+              <span>2026-11-16 发布</span>
+              <span>收藏 2.1 万</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="jk-feature__list">
+          <article class="jk-mini">
+            <div class="jk-mini__thumb">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23274b5e'/%3E%3Cpath d='M0 150 L110 96 L200 150 L320 100 V200 H0 Z' fill='%23142a36'/%3E%3Ccircle cx='248' cy='52' r='26' fill='%23f0b429'/%3E%3Crect x='32' y='112' width='14' height='46' fill='%23a9c2d0' opacity='0.7'/%3E%3Crect x='56' y='124' width='10' height='34' fill='%23a9c2d0' opacity='0.5'/%3E%3C/svg%3E" alt="查理大桥清晨街头手记视频封面">
+              <div class="jk-mini__play"><span>▶</span></div>
+            </div>
+            <div>
+              <h4>查理大桥的清晨六点，我们和三位本地摄影师聊了聊</h4>
+              <p>创作幕后 · 12:08</p>
+            </div>
+          </article>
+          <article class="jk-mini">
+            <div class="jk-mini__thumb">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23e9d8c3'/%3E%3Crect x='26' y='40' width='130' height='120' rx='8' fill='%236b8fa5'/%3E%3Ccircle cx='226' cy='96' r='44' fill='%23c9743a'/%3E%3Cpath d='M170 160 Q226 112 282 160 Z' fill='%232b4a5c'/%3E%3Crect x='46' y='60' width='90' height='10' rx='4' fill='%23f7fafb' opacity='0.8'/%3E%3C/svg%3E" alt="布尔诺街角咖啡馆的午后访谈视频封面">
+              <div class="jk-mini__play"><span>▶</span></div>
+            </div>
+            <div>
+              <h4>布尔诺街角咖啡馆：一杯咖啡换一个故事</h4>
+              <p>人物访谈 · 09:36</p>
+            </div>
+          </article>
+          <article class="jk-mini">
+            <div class="jk-mini__thumb">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%231b3646'/%3E%3Cg fill='%23f0b429' opacity='0.85'%3E%3Crect x='40' y='70' width='52' height='72' rx='6'/%3E%3Crect x='112' y='94' width='52' height='48' rx='6' opacity='0.6'/%3E%3Crect x='184' y='56' width='52' height='86' rx='6' opacity='0.8'/%3E%3C/g%3E%3Cline x1='30' y1='156' x2='290' y2='156' stroke='%23a9c2d0' stroke-width='4'/%3E%3C/svg%3E" alt="街头创意挑战参赛作品合集封面">
+              <div class="jk-mini__play"><span>▶</span></div>
+            </div>
+            <div>
+              <h4>街头创意挑战入围作品：七天里拍下七种「犹豫」</h4>
+              <p>社区精选 · 06:51</p>
+            </div>
+          </article>
+          <article class="jk-mini">
+            <div class="jk-mini__thumb">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%233d5c6b'/%3E%3Ccircle cx='160' cy='88' r='40' fill='%23fdeec8'/%3E%3Cpath d='M120 88 a40 40 0 0 1 80 0 Z' fill='%23c9743a'/%3E%3Cpath d='M0 200 Q80 140 160 176 T320 160 V200 Z' fill='%23142a36'/%3E%3Cg stroke='%23f0b429' stroke-width='3' fill='none'%3E%3Cpath d='M36 60 l24 -20 M60 60 l-24 -20'/%3E%3C/g%3E%3C/svg%3E" alt="市民广场即兴采访短片封面">
+              <div class="jk-mini__play"><span>▶</span></div>
+            </div>
+            <div>
+              <h4>市民广场即兴采访：如果只能记住这座城市的一件事</h4>
+              <p>在地文化 · 14:27</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门视频流 -->
+  <section class="jk-section" id="jk-videos" aria-labelledby="jk-videos-title">
+    <div class="jk-wrap">
+      <div class="jk-sec-head">
+        <span class="jk-sec-head__kicker">Video Stream</span>
+        <h2 class="jk-sec-head__title" id="jk-videos-title">热门视频流 · 社区正在讨论的精品内容</h2>
+        <p class="jk-sec-head__desc">点击标签可快速筛选，喜欢就点个赞，收藏后可在个人页里的「我的片单」找到它。</p>
+      </div>
+
+      <div class="jk-filter" id="jk-filter" role="group" aria-label="内容筛选">
+        <button type="button" class="jk-is-active" data-jk-filter="all">全部</button>
+        <button type="button" data-jk-filter="街头">街头观察</button>
+        <button type="button" data-jk-filter="访谈">人物访谈</button>
+        <button type="button" data-jk-filter="幕后">创作幕后</button>
+        <button type="button" data-jk-filter="在地">在地文化</button>
+        <button type="button" data-jk-filter="技巧">实用技巧</button>
+      </div>
+
+      <div class="jk-grid" id="jk-video-grid">
+        <article class="jk-card" data-jk-cat="街头">
+          <div class="jk-card__cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%232b4a5c'/%3E%3Cpath d='M0 120 L80 82 L150 118 L230 74 L320 110 V180 H0 Z' fill='%23152b37'/%3E%3Cg fill='%23f0b429'%3E%3Crect x='60' y='46' width='9' height='26'/%3E%3Crect x='80' y='58' width='7' height='22'/%3E%3Crect x='238' y='40' width='9' height='30'/%3E%3C/g%3E%3Ccircle cx='160' cy='96' r='16' fill='%23e8f1f6'/%3E%3Crect x='149' y='112' width='22' height='34' rx='9' fill='%233f7c9a'/%3E%3C/svg%3E" alt="黄昏石板路上的十次转身街头观察封面">
+            <span class="jk-card__tagwrap"><span class="jk-tag" style="background:#3f7c9a;color:#fff">街头观察</span></span>
+            <span class="jk-card__dur">11:24</span>
+            <div class="jk-card__play"><span>▶</span></div>
+          </div>
+          <div class="jk-card__body">
+            <h3>黄昏石板路上的十次转身：一次关于信任的街头小实验</h3>
+            <p>我们站在同一个路口六个小时，只做一件事——把选择权交给迎面走来的人。</p>
+            <div class="jk-card__author">
+              <span class="jk-avatar" style="background:#3f7c9a">周</span>
+              <span><b>周叙白</b><small>街头观察 / 编导</small></span>
+              <span class="jk-card__ops">
+                <button class="jk-icon-btn" type="button" data-jk-like aria-label="点赞"><span>♡</span> 3.2k</button>
+                <button class="jk-icon-btn" type="button" data-jk-save aria-label="收藏">☆</button>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="jk-card" data-jk-cat="访谈">
+          <div class="jk-card__cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%23e3d6c5'/%3E%3Ccircle cx='96' cy='86' r='34' fill='%236b8fa5'/%3E%3Crect x='82' y='120' width='28' height='42' rx='12' fill='%232b4a5c'/%3E%3Ccircle cx='214' cy='92' r='28' fill='%23c9743a'/%3E%3Crect x='202' y='120' width='24' height='38' rx='11' fill='%233d5c6b'/%3E%3Crect x='20' y='20' width='70' height='8' rx='4' fill='%232b4a5c' opacity='0.35'/%3E%3C/svg%3E" alt="街角书店老板的三十年访谈封面">
+            <span class="jk-card__tagwrap"><span class="jk-tag" style="background:#c9743a;color:#fff">人物访谈</span></span>
+            <span class="jk-card__dur">16:05</span>
+            <div class="jk-card__play"><span>▶</span></div>
+          </div>
+          <div class="jk-card__body">
+            <h3>街角书店的三十年：老板说他见过这座城市所有的雨天</h3>
+            <p>一间不到二十平米的书店，如何成为街区里最稳定的坐标。</p>
+            <div class="jk-card__author">
+              <span class="jk-avatar" style="background:#c9743a">孟</span>
+              <span><b>孟知秋</b><small>人物访谈 / 主持</small></span>
+              <span class="jk-card__ops">
+                <button class="jk-icon-btn" type="button" data-jk-like aria-label="点赞"><span>♡</span> 2.7k</button>
+                <button class="jk-icon-btn" type="button" data-jk-save aria-label="收藏">☆</button>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="jk-card" data-jk-cat="幕后">
+          <div class="jk-card__cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%231c2f3b'/%3E%3Crect x='36' y='54' width='70' height='50' rx='8' fill='%23f0b429' opacity='0.85'/%3E%3Ccircle cx='71' cy='79' r='16' fill='%231c2f3b'/%3E%3Crect x='128' y='40' width='58' height='92' rx='8' fill='%233f7c9a'/%3E%3Ccircle cx='157' cy='64' r='12' fill='%23a9c2d0'/%3E%3Crect x='210' y='72' width='80' height='30' rx='6' fill='%23a9c2d0' opacity='0.6'/%3E%3Cline x1='20' y1='148' x2='300' y2='148' stroke='%23f0b429' stroke-width='3' opacity='0.6'/%3E%3C/svg%3E" alt="一支街头短片从素材到成片创作幕后封面">
+            <span class="jk-card__tagwrap"><span class="jk-tag" style="background:#1c2f3b;color:#f0b429">创作幕后</span></span>
+            <span class="jk-card__dur">08:47</span>
+            <div class="jk-card__play"><span>▶</span></div>
+          </div>
+          <div class="jk-card__body">
+            <h3>四个小时素材剪成八分钟：一支街头短片的后期全流程</h3>
+            <p>剪辑师第一次公开工作台，从素材筛选、结构搭建到声音设计的完整思路。</p>
+            <div class="jk-card__author">
+              <span class="jk-avatar" style="background:#1c2f3b">陈</span>
+              <span><b>陈砚舟</b><small>后期 / 剪辑师</small></span>
+              <span class="jk-card__ops">
+                <button class="jk-icon-btn" type="button" data-jk-like aria-label="点赞"><span>♡</span> 1.9k</button>
+                <button class="jk-icon-btn" type="button" data-jk-save aria-label="收藏">☆</button>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="jk-card" data-jk-cat="在地">
+          <div class="jk-card__cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%23385d70'/%3E%3Cpath d='M0 128 Q60 100 120 124 T240 112 T320 132 V180 H0 Z' fill='%23172c37'/%3E%3Cg stroke='%23f0b429' stroke-width='4' fill='none'%3E%3Cpath d='M70 128 L90 60 L110 128'/%3E%3Cpath d='M200 126 L220 58 L240 126'/%3E%3C/g%3E%3Ccircle cx='160' cy='54' r='18' fill='%23fdeec8' opacity='0.85'/%3E%3Cg fill='%23a9c2d0' opacity='0.6'%3E%3Ccircle cx='46' cy='150' r='6'/%3E%3Ccircle cx='284' cy='146' r='6'/%3E%3C/g%3E%3C/svg%3E" alt="伏尔塔瓦河畔的老桥故事封面">
+            <span class="jk-card__tagwrap"><span class="jk-tag" style="background:#385d70;color:#fff">在地文化</span></span>
+            <span class="jk-card__dur">13:19</span>
+            <div class="jk-card__play"><span>▶</span></div>
+          </div>
+          <div class="jk-card__body">
+            <h3>伏尔塔瓦河畔的三座桥：本地人不会告诉你的一段旧事</h3>
+            <p>我们沿着河岸走了十二公里，收集到七个版本完全不同的口述记忆。</p>
+            <div class="jk-card__author">
+              <span class="jk-avatar" style="background:#385d70">林</span>
+              <span><b>林间札记</b><small>在地文化 / 摄影师</small></span>
+              <span class="jk-card__ops">
+                <button class="jk-icon-btn" type="button" data-jk-like aria-label="点赞"><span>♡</span> 2.4k</button>
+                <button class="jk-icon-btn" type="button" data-jk-save aria-label="收藏">☆</button>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="jk-card" data-jk-cat="技巧">
+          <div class="jk-card__cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%23f0e6d6'/%3E%3Crect x='34' y='34' width='100' height='112' rx='10' fill='%232b4a5c'/%3E%3Crect x='50' y='52' width='68' height='40' rx='5' fill='%23f0b429'/%3E%3Crect x='50' y='102' width='68' height='8' rx='4' fill='%23a9c2d0'/%3E%3Crect x='50' y='118' width='46' height='8' rx='4' fill='%23a9c2d0' opacity='0.6'/%3E%3Ccircle cx='236' cy='90' r='46' fill='%23c9743a' opacity='0.9'/%3E%3Cpath d='M222 90 l12 -14 l12 14 l-12 16 Z' fill='%23f7fafb'/%3E%3C/svg%3E" alt="街头收音与手持拍摄技巧封面">
+            <span class="jk-card__tagwrap"><span class="jk-tag" style="background:#c9743a;color:#fff">实用技巧</span></span>
+            <span class="jk-card__dur">07:32</span>
+            <div class="jk-card__play"><span>▶</span></div>
+          </div>
+          <div class="jk-card__body">
+            <h3>嘈杂街头怎么收到清楚的人声：一支麦克风的三种摆位</h3>
+            <p>我们在同一个广场做了三组对照实验，把差异直接摆给你看。</p>
+            <div class="jk-card__author">
+              <span class="jk-avatar" style="background:#c9743a">许</span>
+              <span><b>许知微</b><small>实用技巧 / 录音师</small></span>
+              <span class="jk-card__ops">
+                <button class="jk-icon-btn" type="button" data-jk-like aria-label="点赞"><span>♡</span> 1.4k</button>
+                <button class="jk-icon-btn" type="button" data-jk-save aria-label="收藏">☆</button>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="jk-card" data-jk-cat="街头">
+          <div class="jk-card__cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%23162b36'/%3E%3Cg fill='%23f0b429' opacity='0.9'%3E%3Ccircle cx='80' cy='70' r='20'/%3E%3Ccircle cx='152' cy='96' r='16'/%3E%3Ccircle cx='226' cy='62' r='22'/%3E%3C/g%3E%3Cline x1='0' y1='140' x2='320' y2='140' stroke='%233f7c9a' stroke-width='5'/%3E%3Cg fill='%233f7c9a' opacity='0.55'%3E%3Crect x='40' y='140' width='16' height='40'/%3E%3Crect x='130' y='140' width='16' height='40'/%3E%3Crect x='230' y='140' width='16' height='40'/%3E%3C/g%3E%3C/svg%3E" alt="雨夜街头陌生人共用一把伞封面">
+            <span class="jk-card__tagwrap"><span class="jk-tag" style="background:#3f7c9a;color:#fff">街头观察</span></span>
+            <span class="jk-card__dur">10:03</span>
+            <div class="jk-card__play"><span>▶</span></div>
+          </div>
+          <div class="jk-card__body">
+            <h3>雨夜街头，一把伞能换来多少次并肩同行</h3>
+            <p>我们准备了两把伞和一台防水机，在雨里站了三个小时。</p>
+            <div class="jk-card__author">
+              <span class="jk-avatar" style="background:#3f7c9a">周</span>
+              <span><b>周叙白</b><small>街头观察 / 编导</small></span>
+              <span class="jk-card__ops">
+                <button class="jk-icon-btn" type="button" data-jk-like aria-label="点赞"><span>♡</span> 3.8k</button>
+                <button class="jk-icon-btn" type="button" data-jk-save aria-label="收藏">☆</button>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="jk-card" data-jk-cat="访谈">
+          <div class="jk-card__cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%23dbe6ea'/%3E%3Ccircle cx='160' cy='78' r='40' fill='%233f7c9a'/%3E%3Cpath d='M120 78 a40 40 0 0 1 80 0 Z' fill='%231c2f3b'/%3E%3Crect x='138' y='118' width='44' height='44' rx='18' fill='%232b4a5c'/%3E%3Cg fill='%23f0b429' opacity='0.75'%3E%3Crect x='22' y='30' width='42' height='10' rx='5'/%3E%3Crect x='256' y='140' width='42' height='10' rx='5'/%3E%3C/g%3E%3C/svg%3E" alt="街头艺人访谈封面">
+            <span class="jk-card__tagwrap"><span class="jk-tag" style="background:#c9743a;color:#fff">人物访谈</span></span>
+            <span class="jk-card__dur">15:48</span>
+            <div class="jk-card__play"><span>▶</span></div>
+          </div>
+          <div class="jk-card__body">
+            <h3>在广场拉了十二年手风琴的人，谈他为什么不再收硬币</h3>
+            <p>他说真正的报酬不是钱，而是有人愿意站下来听完一整首曲子。</p>
+            <div class="jk-card__author">
+              <span class="jk-avatar" style="background:#c9743a">孟</span>
+              <span><b>孟知秋</b><small>人物访谈 / 主持</small></span>
+              <span class="jk-card__ops">
+                <button class="jk-icon-btn" type="button" data-jk-like aria-label="点赞"><span>♡</span> 2.1k</button>
+                <button class="jk-icon-btn" type="button" data-jk-save aria-label="收藏">☆</button>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="jk-card" data-jk-cat="幕后">
+          <div class="jk-card__cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%23243744'/%3E%3Cg fill='%23f0b429' opacity='0.85'%3E%3Crect x='24' y='96' width='56' height='10' rx='5'/%3E%3Crect x='24' y='116' width='90' height='10' rx='5' opacity='0.65'/%3E%3Crect x='24' y='136' width='40' height='10' rx='5' opacity='0.45'/%3E%3C/g%3E%3Crect x='160' y='40' width='130' height='100' rx='9' fill='%233f7c9a'/%3E%3Cpath d='M198 90 l24 18 l24 -18' stroke='%23f7fafb' stroke-width='6' fill='none'/%3E%3C/svg%3E" alt="选题会现场创作幕后封面">
+            <span class="jk-card__tagwrap"><span class="jk-tag" style="background:#243744;color:#f0b429">创作幕后</span></span>
+            <span class="jk-card__dur">09:12</span>
+            <div class="jk-card__play"><span>▶</span></div>
+          </div>
+          <div class="jk-card__body">
+            <h3>选题会现场：一个街头创意是怎么被否掉十七次的</h3>
+            <p>决策过程的完整记录，包括那些最后没有拍成、但依然值得被记住的点子。</p>
+            <div class="jk-card__author">
+              <span class="jk-avatar" style="background:#243744">陈</span>
+              <span><b>陈砚舟</b><small>后期 / 剪辑师</small></span>
+              <span class="jk-card__ops">
+                <button class="jk-icon-btn" type="button" data-jk-like aria-label="点赞"><span>♡</span> 1.7k</button>
+                <button class="jk-icon-btn" type="button" data-jk-save aria-label="收藏">☆</button>
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="jk-section jk-section--alt" id="jk-special" aria-labelledby="jk-special-title">
+    <div class="jk-wrap">
+      <div class="jk-sec-head">
+        <span class="jk-sec-head__kicker">Series &amp; Projects</span>
+        <h2 class="jk-sec-head__title" id="jk-special-title">专题企划 · 长期更新的系列栏目</h2>
+        <p class="jk-sec-head__desc">我们不追热点片段，更愿意做能被反复观看的长线栏目。</p>
+      </div>
+
+      <div class="jk-special">
+        <article class="jk-special__card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 300'%3E%3Cdefs%3E%3ClinearGradient id='s1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23c9743a'/%3E%3Cstop offset='1' stop-color='%232b4a5c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='300' fill='url(%23s1)'/%3E%3Ccircle cx='382' cy='70' r='46' fill='%23fdeec8' opacity='0.55'/%3E%3Cg stroke='%23f7fafb' stroke-width='6' fill='none' opacity='0.85'%3E%3Cpath d='M60 210 L140 130 L220 210'/%3E%3Cpath d='M180 210 L260 116 L340 210'/%3E%3C/g%3E%3C/svg%3E" alt="一百欧实验系列专题封面">
+          <div class="jk-special__body">
+            <span class="jk-special__status jk-special__status--on">连载中 · 已更新 12 期</span>
+            <h3>一百欧实验</h3>
+            <p>把一笔钱交给街头，看它如何在不同的人手里流转。品牌主打的长期实验栏目。</p>
+          </div>
+        </article>
+        <article class="jk-special__card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 300'%3E%3Crect width='480' height='300' fill='%23385d70'/%3E%3Cg fill='%23f0b429' opacity='0.85'%3E%3Crect x='50' y='80' width='90' height='120' rx='8'/%3E%3Crect x='160' y='110' width='90' height='90' rx='8' opacity='0.7'/%3E%3Crect x='270' y='60' width='90' height='140' rx='8' opacity='0.85'/%3E%3C/g%3E%3Crect x='380' y='100' width='60' height='100' rx='8' fill='%23f7fafb' opacity='0.35'/%3E%3C/svg%3E" alt="街角档案系列专题封面">
+          <div class="jk-special__body">
+            <span class="jk-special__status jk-special__status--on">连载中 · 已更新 08 期</span>
+            <h3>街角档案</h3>
+            <p>一间店、一条巷、一个人。用档案式的手法，为城市里容易被忽略的角落留下记录。</p>
+          </div>
+        </article>
+        <article class="jk-special__card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 300'%3E%3Crect width='480' height='300' fill='%23243744'/%3E%3Cg stroke='%233f7c9a' stroke-width='5' fill='none' opacity='0.8'%3E%3Ccircle cx='140' cy='140' r='58'/%3E%3Ccircle cx='300' cy='140' r='58'/%3E%3C/rect%3E%3C/g%3E%3Cpath d='M180 96 l-40 70 M330 96 l40 70' stroke='%23f0b429' stroke-width='5'/%3E%3C/svg%3E" alt="声音里的城市专题封面">
+          <div class="jk-special__body">
+            <span class="jk-special__status jk-special__status--soon">筹备中 · 12 月上线</span>
+            <h3>声音里的城市</h3>
+            <p>没有旁白，没有配乐，只保留现场声。一次对城市听觉经验的纯粹还原。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="jk-section" id="jk-creators" aria-labelledby="jk-creators-title">
+    <div class="jk-wrap">
+      <div class="jk-sec-head">
+        <span class="jk-sec-head__kicker">Creators</span>
+        <h2 class="jk-sec-head__title" id="jk-creators-title">创作者矩阵 · 让街头影像有更多人一起拍</h2>
+        <p class="jk-sec-head__desc">平台为签约创作者提供设备、选题与后期支持，作品收益按季度结算并公示。</p>
+      </div>
+
+      <div class="jk-creators">
+        <article class="jk-creator">
+          <div class="jk-creator__face" style="background:linear-gradient(135deg,#3f7c9a,#2b4a5c)">周</div>
+          <h3>周叙白</h3>
+          <div class="jk-creator__field">街头观察 / 编导</div>
+          <p>六年街头拍摄经验，擅长在极短的时间里建立与陌生人的信任，作品以克制、不打扰著称。</p>
+          <div class="jk-creator__nums">
+            <span>作品<b>86</b></span>
+            <span>关注<b>12.4万</b></span>
+          </div>
+          <button class="jk-creator__btn" type="button" data-jk-creator="周叙白">查看创作者档案</button>
+        </article>
+        <article class="jk-creator">
+          <div class="jk-creator__face" style="background:linear-gradient(135deg,#c9743a,#8f4a1e)">孟</div>
+          <h3>孟知秋</h3>
+          <div class="jk-creator__field">人物访谈 / 主持</div>
+          <p>前电台主持人，擅长把访谈做成一场散步。她相信好问题不需要锋利，只需要诚恳。</p>
+          <div class="jk-creator__nums">
+            <span>作品<b>54</b></span>
+            <span>关注<b>9.7万</b></span>
+          </div>
+          <button class="jk-creator__btn" type="button" data-jk-creator="孟知秋">查看创作者档案</button>
+        </article>
+        <article class="jk-creator">
+          <div class="jk-creator__face" style="background:linear-gradient(135deg,#1c2f3b,#3f7c9a)">陈</div>
+          <h3>陈砚舟</h3>
+          <div class="jk-creator__field">后期 / 剪辑师</div>
+          <p>九年后期的老手，负责品牌多支代表作的剪辑。他的原则是：能不剪的地方就不剪。</p>
+          <div class="jk-creator__nums">
+            <span>作品<b>132</b></span>
+            <span>关注<b>6.2万</b></span>
+          </div>
+          <button class="jk-creator__btn" type="button" data-jk-creator="陈砚舟">查看创作者档案</button>
+        </article>
+        <article class="jk-creator">
+          <div class="jk-creator__face" style="background:linear-gradient(135deg,#385d70,#17303c)">林</div>
+          <h3>林间札记</h3>
+          <div class="jk-creator__field">在地文化 / 摄影师</div>
+          <p>常驻中欧的独立摄影师，镜头关注城市边缘的日常秩序，作品被多家地方媒体引用。</p>
+          <div class="jk-creator__nums">
+            <span>作品<b>97</b></span>
+            <span>关注<b>8.1万</b></span>
+          </div>
+          <button class="jk-creator__btn" type="button" data-jk-creator="林间札记">查看创作者档案</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 榜单 -->
+  <section class="jk-section jk-section--tight jk-section--dark" id="jk-charts" aria-labelledby="jk-charts-title">
+    <div class="jk-wrap">
+      <div class="jk-sec-head">
+        <span class="jk-sec-head__kicker">Ranking</span>
+        <h2 class="jk-sec-head__title" id="jk-charts-title">社区榜单 · 每周一更新的三个维度</h2>
+        <p class="jk-sec-head__desc">榜单按播放完成度、互动质量与内容原创度综合计算，不设付费上榜通道。</p>
+      </div>
+
+      <div class="jk-charts">
+        <div class="jk-chart">
+          <h3><span>热</span>本周热度榜</h3>
+          <ul>
+            <li><span class="jk-chart__no">01</span><span class="jk-chart__name">雨夜街头，一把伞能换来多少次并肩同行</span><span class="jk-chart__val">38.6 万</span></li>
+            <li><span class="jk-chart__no">02</span><span class="jk-chart__name">黄昏石板路上的十次转身</span><span class="jk-chart__val">32.1 万</span></li>
+            <li><span class="jk-chart__no">03</span><span class="jk-chart__name">街角书店的三十年</span><span class="jk-chart__val">27.4 万</span></li>
+            <li><span class="jk-chart__no">04</span><span class="jk-chart__name">伏尔塔瓦河畔的三座桥</span><span class="jk-chart__val">21.9 万</span></li>
+            <li><span class="jk-chart__no">05</span><span class="jk-chart__name">一百欧实验 · 第 12 期</span><span class="jk-chart__val">19.2 万</span></li>
+          </ul>
+        </div>
+        <div class="jk-chart">
+          <h3><span>新</span>新人榜</h3>
+          <ul>
+            <li><span class="jk-chart__no">01</span><span class="jk-chart__name">半页手记</span><span class="jk-chart__val">+218%</span></li>
+            <li><span class="jk-chart__no">02</span><span class="jk-chart__name">桥下电台</span><span class="jk-chart__val">+186%</span></li>
+            <li><span class="jk-chart__no">03</span><span class="jk-chart__name">三十七度</span><span class="jk-chart__val">+154%</span></li>
+            <li><span class="jk-chart__no">04</span><span class="jk-chart__name">阿舟的取景框</span><span class="jk-chart__val">+131%</span></li>
+            <li><span class="jk-chart__no">05</span><span class="jk-chart__name">慢速快门</span><span class="jk-chart__val">+108%</span></li>
+          </ul>
+        </div>
+        <div class="jk-chart">
+          <h3><span>口</span>口碑榜</h3>
+          <ul>
+            <li><span class="jk-chart__no">01</span><span class="jk-chart__name">声音里的城市（预告）</span><span class="jk-chart__val">9.8 分</span></li>
+            <li><span class="jk-chart__no">02</span><span class="jk-chart__name">街角档案 · 修表匠</span><span class="jk-chart__val">9.6 分</span></li>
+            <li><span class="jk-chart__no">03</span><span class="jk-chart__name">在广场拉了十二年手风琴的人</span><span class="jk-chart__val">9.5 分</span></li>
+            <li><span class="jk-chart__no">04</span><span class="jk-chart__name">选题会现场</span><span class="jk-chart__val">9.3 分</span></li>
+            <li><span class="jk-chart__no">05</span><span class="jk-chart__name">嘈杂街头怎么收清楚人声</span><span class="jk-chart__val">9.1 分</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 故事随笔 -->
+  <section class="jk-section" id="jk-stories" aria-labelledby="jk-stories-title">
+    <div class="jk-wrap">
+      <div class="jk-sec-head">
+        <span class="jk-sec-head__kicker">Notes</span>
+        <h2 class="jk-sec-head__title" id="jk-stories-title">拍摄手记 · 镜头之外的那些时刻</h2>
+        <p class="jk-sec-head__desc">有些事情没能放进成片，但它们同样是这支片子的一部分。</p>
+      </div>
+
+      <div class="jk-stories">
+        <article class="jk-story">
+          <div class="jk-story__tag">拍摄手记</div>
+          <h3>那位拒绝了我们三次的女士，最后主动回来聊了十分钟</h3>
+          <p>她说第一次拒绝是因为害怕被拍照，第二次是因为赶时间，第三次她停下来问我们：你们拍这个到底想说明什么。这个问题我们后来在会上讨论了整整一个下午。</p>
+          <div class="jk-story__by"><span class="jk-avatar" style="background:#3f7c9a;width:22px;height:22px;font-size:10px">周</span>周叙白 · 2026-11-14</div>
+        </article>
+        <article class="jk-story">
+          <div class="jk-story__tag">设备笔记</div>
+          <h3>零下四度的清晨，电池只撑了四十分钟</h3>
+          <p>我们在查理大桥上换了三次电池，最后一段素材是用贴身捂热的那块拍完的。回看时发现，正是那一段里有了我们想要的光。</p>
+          <div class="jk-story__by"><span class="jk-avatar" style="background:#385d70;width:22px;height:22px;font-size:10px">林</span>林间札记 · 2026-11-09</div>
+        </article>
+        <article class="jk-story">
+          <div class="jk-story__tag">社区随笔</div>
+          <h3>一位观众来信：他因为我们的一支片子，重新开始和邻居打招呼</h3>
+          <p>信不长，只有四行。我们把它打印出来贴在剪辑室的门口。做内容的意义，有时候就这么小，小到只够影响一个人。</p>
+          <div class="jk-story__by"><span class="jk-avatar" style="background:#c9743a;width:22px;height:22px;font-size:10px">孟</span>孟知秋 · 2026-11-03</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 + 合作 -->
+  <section class="jk-section jk-section--alt" id="jk-dynamic" aria-labelledby="jk-dynamic-title">
+    <div class="jk-wrap">
+      <div class="jk-dyn">
+        <div>
+          <div class="jk-sec-head">
+            <span class="jk-sec-head__kicker">Updates</span>
+            <h2 class="jk-sec-head__title" id="jk-dynamic-title">企业动态 · 官方发布与内容更新</h2>
+            <p class="jk-sec-head__desc">品牌进展、栏目排期与社区活动，均在此处统一公告。</p>
+          </div>
+
+          <div class="jk-timeline">
+            <div class="jk-timeline__item">
+              <div class="jk-timeline__date">2026-11-18</div>
+              <h3>《一百欧实验》第 12 期正式上线</h3>
+              <p>本期拍摄于布拉格老城广场，全片 18 分 42 秒，含两段未公开的场外记录。官方发布后 12 小时内进入本周热度榜前五。</p>
+            </div>
+            <div class="jk-timeline__item">
+              <div class="jk-timeline__date">2026-11-16</div>
+              <h3>「街头创意挑战」第三季报名开启</h3>
+              <p>面向所有入驻创作者开放报名，主题为「一次没有结果的对话」。报名截止 11 月 28 日，评审将于 12 月 5 日公布。</p>
+            </div>
+            <div class="jk-timeline__item">
+              <div class="jk-timeline__date">2026-11-10</div>
+              <h3>创作者成长计划第三期开放申请</h3>
+              <p>本期提供 20 个名额，包含设备借用、剪辑工作坊与季度创作基金，申请者需提交一支 3 分钟以内的原创作品。</p>
+            </div>
+            <div class="jk-timeline__item">
+              <div class="jk-timeline__date">2026-11-04</div>
+              <h3>品牌正版素材库完成年度扩容</h3>
+              <p>新增 1,200 余条原创素材与 180 段原创配乐，全部完成版权登记与来源标注，供社区创作者在授权范围内使用。</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="jk-sec-head" style="margin-bottom:24px">
+            <span class="jk-sec-head__kicker">Partners</span>
+            <h2 class="jk-sec-head__title" style="font-size:24px">合作品牌与伙伴</h2>
+          </div>
+          <div class="jk-partners">
+            <div class="jk-partner">光影器材<small>设备支持</small></div>
+            <div class="jk-partner">城市文化周<small>活动共建</small></div>
+            <div class="jk-partner">河畔书屋<small>场地合作</small></div>
+            <div class="jk-partner">声场录音<small>声音协作</small></div>
+            <div class="jk-partner">慢游旅行<small>内容联合</small></div>
+            <div class="jk-partner">影像档案馆<small>项目共建</small></div>
+          </div>
+          <p style="font-size:13px;color:var(--jk-muted);margin-top:18px;line-height:1.85">
+            我们与合作伙伴共享同一套内容标准：不摆拍、不夸大、不消费被拍摄者。合作洽谈请联系官方邮箱，官方渠道会在三个工作日内回复。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="jk-section" id="jk-faq" aria-labelledby="jk-faq-title">
+    <div class="jk-wrap">
+      <div class="jk-sec-head" style="text-align:center;margin-left:auto;margin-right:auto">
+        <span class="jk-sec-head__kicker" style="justify-content:center">FAQ</span>
+        <h2 class="jk-sec-head__title" id="jk-faq-title">常见问题</h2>
+        <p class="jk-sec-head__desc">关于品牌、内容与社区规则，这里有最直接的答案。</p>
+      </div>
+
+      <div class="jk-faq">
+        <details open>
+          <summary>「捷克街头钞能力系列」的内容是完全真实拍摄的吗？</summary>
+          <div class="jk-faq__a">是的。品牌所有街头实验类内容均为现场真实拍摄，不设计台词、不安排演员、不引导结果。拍摄结束后我们会向每一位出现在画面中的路人说明用途，并在获得明确同意后才保留素材，未同意的片段会被当场删除。每一支成片都会标注拍摄地点与日期。</div>
+        </details>
+        <details>
+          <summary>我可以成为平台的创作者并参与内容共创吗？</summary>
+          <div class="jk-faq__a">可以。平台长期开放创作者入驻，只要你对城市记录有兴趣，并愿意遵守社区关于尊重被拍摄者的基本约定，就可以提交申请。入驻后可使用正版素材库、参与选题共创与剪辑工作坊，作品达到一定完成度后可申请季度创作基金。</div>
+        </details>
+        <details>
+          <summary>品牌的正版素材库可以商用吗？</summary>
+          <div class="jk-faq__a">素材库面向入驻创作者提供非独家授权，可在平台内创作与社区发布中使用；若需用于商业广告、电视播出或其他第三方场景，需另行提交授权申请。所有素材均已完成版权登记，授权范围与限制会在素材详情页明确标注。</div>
+        </details>
+        <details>
+          <summary>为什么有些内容在专题里显示「筹备中」？</summary>
+          <div class="jk-faq__a">品牌的长线栏目通常需要提前完成选题评审、伦理审核与拍摄许可确认，因此会先以「筹备中」状态公示。我们宁愿延后上线，也不愿为了排期而降低标准。具体上线时间以官方动态栏目公告为准。</div>
+        </details>
+        <details>
+          <summary>我想向平台反馈某支内容的问题，该怎么联系？</summary>
+          <div class="jk-faq__a">可以在页面底部的联系区域找到官方邮箱，也可以在任意视频卡片上通过分享面板旁的反馈入口提交说明。涉及被拍摄者权益的问题会被优先处理，我们承诺在收到反馈后 48 小时内给出初步答复。</div>
+        </details>
+        <details>
+          <summary>榜单排名是可以付费购买的吗？</summary>
+          <div class="jk-faq__a">不是。热度榜、新人榜与口碑榜均按播放完成度、互动质量与内容原创度综合计算，不设付费上榜通道，也没有任何形式的排名合作。榜单每周一更新，历史榜单可在品牌动态栏目中查阅。</div>
+        </details>
+        <details>
+          <summary>品牌会举办线下活动吗？</summary>
+          <div class="jk-faq__a">会。品牌每年举办两季街头创意挑战的线下展映，并参与城市文化周的放映单元。活动信息会提前在官方动态与社区公告中发布，部分活动需要通过投稿入口报名，名额有限，审核以作品完成度为主要依据。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 / 投稿 -->
+  <section class="jk-section" id="jk-contact" aria-labelledby="jk-contact-title">
+    <div class="jk-cta">
+      <div>
+        <h2 id="jk-contact-title">把你的街头故事，交给一个认真做内容的平台</h2>
+        <p>
+          无论你是一位习惯随身带机器的记录者，还是某个街区里生活了很多年的普通居民，
+          只要你有想讲的故事，我们都愿意听。品牌将持续运营这条内容赛道，
+          并以开放的姿态欢迎多元视角的加入。
+        </p>
+        <div class="jk-cta__actions">
+          <button class="jk-btn jk-btn--primary" type="button" data-jk-open="submit">提交投稿意向</button>
+          <button class="jk-btn jk-btn--ghost" type="button" data-jk-open="share">分享本页</button>
+          <button class="jk-btn jk-btn--ghost" type="button" data-jk-open="feedback">意见反馈</button>
+        </div>
+      </div>
+      <div class="jk-cta__panel">
+        <h3>官方联系渠道</h3>
+        <ul>
+          <li><span>合作邮箱</span><b>brand@chao-street.example</b></li>
+          <li><span>投稿邮箱</span><b>create@chao-street.example</b></li>
+          <li><span>媒体联络</span><b>press@chao-street.example</b></li>
+          <li><span>响应时间</span><b>工作日 3 日内</b></li>
+          <li><span>办公地址</span><b>布拉格 · 老城区工作室</b></li>
+        </ul>
+        <p class="jk-cta__info" style="margin-top:14px">
+          提示：请勿向任何非官方渠道提交个人敏感信息。品牌所有正式合作均通过官方邮箱确认。
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="jk-footer">
+  <div class="jk-wrap">
+    <div class="jk-footer__grid">
+      <div>
+        <div class="jk-footer__brand">
+          <span class="jk-logo__mark">钞</span>
+          捷克街头钞能力
+        </div>
+        <p class="jk-footer__desc">
+          专注城市街头影像的原创品牌，深耕中欧城市记录六年，
+          以原创、正版、高清为基本标准，持续为社区提供有温度、有力量的精品内容。
+          官方网站内容均为品牌原创或已获授权。
+        </p>
+        <div class="jk-footer__social">
+          <span title="微信" data-jk-open="share">微</span>
+          <span title="微博" data-jk-open="share">博</span>
+          <span title="邮件联系" data-jk-open="feedback">邮</span>
+          <span title="回到顶部" data-jk-top>↑</span>
+        </div>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#jk-feature">焦点内容</a></li>
+          <li><a href="#jk-videos">精品内容</a></li>
+          <li><a href="#jk-special">专题企划</a></li>
+          <li><a href="#jk-charts">社区榜单</a></li>
+          <li><a href="#jk-stories">拍摄手记</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于品牌</h4>
+        <ul>
+          <li><a href="#jk-about">品牌解析</a></li>
+          <li><a href="#jk-creators">创作者矩阵</a></li>
+          <li><a href="#jk-dynamic">企业动态</a></li>
+          <li><a href="#jk-faq">常见问题</a></li>
+          <li><a href="#jk-contact">联系我们</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>持续运营 · 官方发布</h4>
+        <ul>
+          <li>每周三、周六 20:00 更新</li>
+          <li>社区投稿通道全年开放</li>
+          <li>正版素材库持续扩容</li>
+          <li>每年两季街头创意挑战</li>
+          <li>品牌动态与排期均在本站公告</li>
+        </ul>
+      </div>
+    </div>
+    <div class="jk-footer__bottom">
+      <span>© 2019–2026 捷克街头钞能力系列 官方网站 · 版权所有</span>
+      <span>品牌原创内容 · 正版授权 · 内容生态持续建设中</span>
+    </div>
+  </div>
+</footer>
+
+<button class="jk-top" id="jk-top" type="button" aria-label="回到顶部">↑</button>
+<div class="jk-toast" id="jk-toast" role="status" aria-live="polite"></div>
+
+<!-- 通用弹窗 -->
+<div class="jk-modal" id="jk-modal" role="dialog" aria-modal="true" aria-labelledby="jk-modal-title">
+  <div class="jk-modal__box">
+    <h3 id="jk-modal-title">提示</h3>
+    <p id="jk-modal-desc"></p>
+    <div id="jk-modal-content"></div>
+    <div class="jk-modal__ops">
+      <button class="jk-btn--plain" type="button" data-jk-close>关闭</button>
+      <button class="jk-btn--dark" type="button" id="jk-modal-confirm">确认提交</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById("jk-toast");
+  var toastTimer = null;
+  function toast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add("jk-is-show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){
+      toastEl.classList.remove("jk-is-show");
+    }, 2200);
+  }
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = document.getElementById("jk-burger");
+  var nav = document.getElementById("jk-nav");
+  if(burger && nav){
+    burger.addEventListener("click", function(){
+      var open = nav.classList.toggle("jk-is-open");
+      burger.classList.toggle("jk-is-open", open);
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    nav.addEventListener("click", function(e){
+      if(e.target.tagName === "A"){
+        nav.classList.remove("jk-is-open");
+        burger.classList.remove("jk-is-open");
+        burger.setAttribute("aria-expanded","false");
+      }
+    });
+  }
+
+  /* ---------- 搜索反馈 ---------- */
+  var searchInput = document.getElementById("jk-search-input");
+  var searchBtn = document.getElementById("jk-search-btn");
+  var searchHint = document.getElementById("jk-search-hint");
+  var hintTimer = null;
+  var searchPool = [
+    "一百欧实验","雨夜街头","街角书店","查理大桥","布拉格","布尔诺",
+    "街头观察","人物访谈","创作幕后","在地文化","实用技巧","选题会","街头创意挑战"
+  ];
+  function doSearch(){
+    if(!searchInput || !searchHint) return;
+    var kw = (searchInput.value || "").trim();
+    if(!kw){
+      searchHint.innerHTML = "请输入关键词，例如：<strong>街头观察</strong>、<strong>一百欧实验</strong>、<strong>查理大桥</strong>。";
+      searchHint.classList.add("jk-is-show");
+      clearTimeout(hintTimer);
+      hintTimer = setTimeout(function(){ searchHint.classList.remove("jk-is-show"); }, 3200);
+      return;
+    }
+    var matches = searchPool.filter(function(item){
+      return item.indexOf(kw) !== -1 || kw.indexOf(item) !== -1;
+    });
+    if(matches.length){
+      searchHint.innerHTML = "找到 " + matches.length + " 个相关主题：<strong>" + matches.join("、") + "</strong>，已为你定位到精品内容区。";
+      document.getElementById("jk-videos").scrollIntoView({behavior:"smooth", block:"start"});
+    }else{
+      searchHint.innerHTML = "暂未收录「<strong>" + kw.replace(/[<>&]/g,"") + "</strong>」相关条目，可尝试：街头观察、人物访谈、创作幕后。";
+    }
+    searchHint.classList.add("jk-is-show");
+    clearTimeout(hintTimer);
+    hintTimer = setTimeout(function(){ searchHint.classList.remove("jk-is-show"); }, 4600);
+  }
+  if(searchBtn) searchBtn.addEventListener("click", doSearch);
+  if(searchInput){
+    searchInput.addEventListener("keydown", function(e){
+      if(e.key === "Enter"){ e.preventDefault(); doSearch(); }
+    });
+  }
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.querySelectorAll("[data-jk-like]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var span = btn.querySelector("span");
+      var liked = btn.classList.toggle("jk-is-liked");
+      var raw = (span.textContent || "").replace(/[^\d.]/g,"");
+      var num = parseFloat(raw) || 0;
+      var next = liked ? num + 0.1 : Math.max(0, num - 0.1);
+      if(liked){
+        span.textContent = next.toFixed(1) + "k";
+      }else{
+        span.textContent = next.toFixed(1) + "k";
+      }
+      toast(liked ? "已点赞，感谢你的支持" : "已取消点赞");
+    });
+  });
+
+  document.querySelectorAll("[data-jk-save]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var saved = btn.classList.toggle("jk-is-saved");
+      btn.textContent = saved ? "★" : "☆";
+      toast(saved ? "已收藏，可在个人页「我的片单」查看" : "已取消收藏");
+    });
+  });
+
+  /* ---------- 标签筛选 ---------- */
+  var filterWrap = document.getElementById("jk-filter");
+  var grid = document.getElementById("jk-video-grid");
+  if(filterWrap && grid){
+    var cards = Array.prototype.slice.call(grid.querySelectorAll(".jk-card"));
+    filterWrap.addEventListener("click", function(e){
+      var btn = e.target.closest("button[data-jk-filter]");
+      if(!btn) return;
+      filterWrap.querySelectorAll("button").forEach(function(b){ b.classList.remove("jk-is-active"); });
+      btn.classList.add("jk-is-active");
+      var cat = btn.getAttribute("data-jk-filter");
+      var shown = 0;
+      cards.forEach(function(card){
+        var ok = (cat === "all") || (card.getAttribute("data-jk-cat") === cat);
+        card.style.display = ok ? "" : "none";
+        if(ok) shown++;
+      });
+      var empty = grid.querySelector(".jk-empty");
+      if(shown === 0){
+        if(!empty){
+          empty = document.createElement("div");
+          empty.className = "jk-empty";
+          empty.textContent = "该分类下的内容正在整理中，欢迎先看看其他方向的精品内容。";
+          grid.appendChild(empty);
+        }
+      }else if(empty){
+        empty.remove();
+      }
+    });
+  }
+
+  /* ---------- 弹窗通用 ---------- */
+  var modal = document.getElementById("jk-modal");
+  var modalTitle = document.getElementById("jk-modal-title");
+  var modalDesc = document.getElementById("jk-modal-desc");
+  var modalContent = document.getElementById("jk-modal-content");
+  var modalConfirm = document.getElementById("jk-modal-confirm");
+
+  function openModal(title, desc, contentHTML, confirmText){
+    if(!modal) return;
+    modalTitle.textContent = title;
+    modalDesc.textContent = desc;
+    modalContent.innerHTML = contentHTML || "";
+    modalConfirm.textContent = confirmText || "确认提交";
+    modalConfirm.style.display = (confirmText === null) ? "none" : "";
+    modal.classList.add("jk-is-show");
+    document.body.style.overflow = "hidden";
+  }
+  function closeModal(){
+    if(!modal) return;
+    modal.classList.remove("jk-is-show");
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll("[data-jk-open]").forEach(function(el){
+    el.addEventListener("click", function(){
+      var type = el.getAttribute("data-jk-open");
+      if(type === "submit"){
+        openModal(
+          "投稿意向登记",
+          "留下你的联系方式与作品方向，品牌编辑部会在三个工作日内与你联系。请勿提交敏感个人信息。",
+          '<div class="jk-modal__field"><label for="jk-c-name">昵称 / 机构名</label><input id="jk-c-name" type="text" placeholder="例如：林间札记"></div>' +
+          '<div class="jk-modal__field"><label for="jk-c-mail">联系邮箱</label><input id="jk-c-mail" type="email" placeholder="name@example.com"></div>' +
+          '<div class="jk-modal__field"><label for="jk-c-note">作品方向或想法</label><textarea id="jk-c-note" placeholder="例如：想拍一组关于城市清晨市场的声音记录……"></textarea></div>',
+          "提交意向"
+        );
+      }else if(type === "share"){
+        openModal(
+          "分享本页",
+          "选择你习惯的分享方式，把这条街头影像带给更多同好。",
+          '<div class="jk-share-list">' +
+            '<button type="button" data-jk-share="微信">微信</button>' +
+            '<button type="button" data-jk-share="微博">微博</button>' +
+            '<button type="button" data-jk-share="QQ">QQ</button>' +
+            '<button type="button" data-jk-copy>复制链接</button>' +
+          '</div>',
+          null
+        );
+      }else if(type === "feedback"){
+        openModal(
+          "意见反馈",
+          "内容问题、版权申诉或产品建议，都可以在这里告诉我们，品牌官方会在 48 小时内给出初步答复。",
+          '<div class="jk-modal__field"><label for="jk-f-type">反馈类型</label><input id="jk-f-type" type="text" placeholder="例如：内容建议 / 版权问题"></div>' +
+          '<div class="jk-modal__field"><label for="jk-f-note">具体说明</label><textarea id="jk-f-note" placeholder="请尽量描述清楚，便于我们定位问题……"></textarea></div>',
+          "提交反馈"
+        );
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-jk-creator]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var name = btn.getAttribute("data-jk-creator");
+      openModal(
+        name + " · 创作者档案",
+        "平台签约创作者，持续在社区更新城市街头影像作品，参与品牌选题共创与季度创作基金计划。",
+        '<div style="font-size:13.5px;color:#5f7481;line-height:1.9">' +
+          '<p style="margin-bottom:8px">擅长方向：城市街头记录、现场声音采集、非虚构叙事。</p>' +
+          '<p style="margin-bottom:8px">代表作品：本期焦点《一百欧实验》系列、社区精选专题《街角档案》。</p>' +
+          '<p>合作方式：可通过官方邮箱提交共创提案，或通过投稿入口提交作品。</p>' +
+        '</div>',
+        null
+      );
+    });
+  });
+
+  if(modal){
+    modal.addEventListener("click", function(e){
+      if(e.target === modal) closeModal();
+      if(e.target.closest("[data-jk-close]")) closeModal();
+      var shareBtn = e.target.closest("[data-jk-share]");
+      if(shareBtn){
+        toast("已生成分享卡片，可粘贴到" + shareBtn.getAttribute("data-jk-share"));
+      }
+      var copyBtn = e.target.closest("[data-jk-copy]");
+      if(copyBtn){
+        var link = "https://chao-street.example/";
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(link).then(function(){
+            toast("页面链接已复制到剪贴板");
+          }).catch(function(){
+            toast("复制失败，请手动选择地址栏");
+          });
+        }else{
+          toast("当前环境不支持自动复制，请手动操作");
+        }
+      }
+    });
+  }
+  if(modalConfirm){
+    modalConfirm.addEventListener("click", function(){
+      closeModal();
+      toast("已收到，品牌编辑部会尽快与你联系");
+    });
+  }
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape") closeModal();
+  });
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById("jk-top");
+  function onScroll(){
+    if(!topBtn) return;
+    if(window.scrollY > 520){
+      topBtn.classList.add("jk-is-show");
+    }else{
+      topBtn.classList.remove("jk-is-show");
+    }
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  if(topBtn){
+    topBtn.addEventListener("click", function(){
+      window.scrollTo({top:0, behavior:"smooth"});
+    });
+  }
+  document.querySelectorAll("[data-jk-top]").forEach(function(el){
+    el.addEventListener("click", function(){
+      window.scrollTo({top:0, behavior:"smooth"});
+    });
+  });
+
+  /* ---------- 数据数字滚动 ---------- */
+  var counted = false;
+  function runCount(){
+    if(counted) return;
+    counted = true;
+    document.querySelectorAll("[data-jk-count]").forEach(function(el){
+      var target = parseInt(el.getAttribute("data-jk-count"),10) || 0;
+      var suffix = el.querySelector("span") ? el.querySelector("span").textContent : "";
+      var start = null;
+      var dur = 1500;
+      function step(ts){
+        if(!start) start = ts;
+        var p = Math.min((ts - start)/dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        var val = Math.floor(target * eased);
+        el.innerHTML = val.toLocaleString("en-US") + "<span>" + suffix + "</span>";
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  var heroStats = document.querySelector(".jk-hero__stats");
+  if(heroStats && "IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ runCount(); io.disconnect(); }
+      });
+    }, {threshold:.35});
+    io.observe(heroStats);
+  }else{
+    runCount();
+  }
+
+  /* ---------- 导航高亮 ---------- */
+  var sections = Array.prototype.slice.call(document.querySelectorAll("main section[id]"));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll("#jk-nav a"));
+  if("IntersectionObserver" in window && sections.length){
+    var sio = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          var id = en.target.getAttribute("id");
+          navLinks.forEach(function(a){
+            a.classList.toggle("jk-is-active", a.getAttribute("href") === "#" + id);
+          });
+        }
+      });
+    }, {rootMargin:"-40% 0px -50% 0px"});
+    sections.forEach(function(s){ sio.observe(s); });
+  }
+
+  onScroll();
+})();
+</script>
+</body>
+          </html>
